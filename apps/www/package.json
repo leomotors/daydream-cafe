@@ -1,0 +1,34 @@
+{
+  "name": "leomotors.me",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --port=5910",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "eslint . --max-warnings=0 && prettier --check \"src/**/*.{js,ts,svelte,scss}\"",
+    "format": "eslint . --fix && prettier --write \"src/**/*.{js,ts,svelte,scss}\""
+  },
+  "devDependencies": {
+    "@leomotors/config": "workspace:0.0.0",
+    "@sveltejs/adapter-static": "1.0.0-next.48",
+    "@sveltejs/kit": "1.0.0-next.571",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "sass": "^1.56.1",
+    "svelte": "^3.53.1",
+    "svelte-bootstrap-icons": "^2.3.1",
+    "svelte-check": "^2.10.0",
+    "svelte-preprocess": "^4.10.7",
+    "tailwindcss": "^3.2.4",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4"
+  },
+  "dependencies": {
+    "@leomotors/constants": "workspace:0.0.0"
+  }
+}
