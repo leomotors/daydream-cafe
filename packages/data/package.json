@@ -1,0 +1,21 @@
+{
+  "name": "@daydream-cafe/data",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./resume": "./src/resume.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "resume": [
+        "src/resume.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint src --max-warnings=0",
+    "format": "eslint src --fix"
+  }
+}

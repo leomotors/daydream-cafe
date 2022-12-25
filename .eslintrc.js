@@ -1,1 +1,1 @@
-module.exports = require("@leomotors/config/eslint");
+module.exports = require("@daydream-cafe/config/eslint");

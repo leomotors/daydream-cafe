@@ -1,10 +1,10 @@
 {
-  "name": "leomotors.me",
+  "name": "resume.leomotors.me",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite dev --port=5910",
+    "dev": "vite dev --port=5911",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -14,13 +14,13 @@
   },
   "devDependencies": {
     "@daydream-cafe/config": "workspace:0.0.0",
+    "@daydream-cafe/data": "workspace:0.0.0",
     "@sveltejs/adapter-static": "1.0.0",
     "@sveltejs/kit": "1.0.1",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.20",
     "sass": "^1.57.1",
     "svelte": "^3.55.0",
-    "svelte-bootstrap-icons": "^2.3.1",
     "svelte-check": "^3.0.1",
     "svelte-preprocess": "^5.0.0",
     "tailwindcss": "^3.2.4",

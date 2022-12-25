@@ -8,10 +8,3 @@ declare namespace App {
   // interface PageData {}
   // interface Platform {}
 }
-
-// Stop VSCode's TypeScript extension from complaining
-// VSCode's Svelte extension still infers types correctly
-declare module "*.svelte" {
-  const Component: import("svelte").SvelteComponent;
-  export default Component;
-}

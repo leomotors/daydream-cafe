@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { Links } from "@leomotors/constants";
+  import { Links } from "@daydream-cafe/constants";
   import Award from "svelte-bootstrap-icons/lib/Award.svelte";
   import Briefcase from "svelte-bootstrap-icons/lib/Briefcase.svelte";
 
-  import { ExtLink, Image, LinkButton } from "$/components/elements";
+  import { ExtLink, Image, LinkButton } from "$components/elements";
 </script>
 
 <main>

@@ -1,1 +1,1 @@
-module.exports = require("@leomotors/config/prettier");
+module.exports = require("@daydream-cafe/config/prettier");

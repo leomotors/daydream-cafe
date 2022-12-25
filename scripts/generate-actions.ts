@@ -81,26 +81,20 @@ jobs:
           directory: ${args.path}/build
 `;
 
-const projects: IArgs[] = [
-  // {
-  //   package: "portfolio.leomotors.net",
-  //   path: "apps/portfolio",
-  //   project: "portfolio-leomotors",
-  //   short: "portfolio",
-  // },
-  // {
-  //   package: "resume.leomotors.net",
-  //   path: "apps/resume",
-  //   project: "resume-leomotors",
-  //   short: "resume",
-  // },
+const projects = [
+  {
+    package: "resume.leomotors.net",
+    path: "apps/resume",
+    project: "resume-leomotors",
+    short: "resume",
+  },
   {
     package: "leomotors.me",
     path: "apps/www",
     project: "www-leomotors",
     short: "www",
   },
-];
+] satisfies IArgs[];
 
 projects.map((project) =>
   Bun.write(`.github/workflows/pages.${project.short}.yml`, template(project))
