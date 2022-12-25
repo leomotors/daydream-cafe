@@ -14,7 +14,6 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-global-dark")],
 };
 
 module.exports = config;

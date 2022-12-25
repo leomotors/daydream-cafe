@@ -12,6 +12,7 @@ const config = {
     require("prettier-plugin-svelte"),
     require("prettier-plugin-tailwindcss"),
   ],
+  pluginSearchDirs: false,
 };
 
 module.exports = config;
