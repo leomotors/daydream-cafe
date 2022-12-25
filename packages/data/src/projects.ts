@@ -30,9 +30,9 @@ export const projects = {
       bgtl: true,
     },
     {
-      title: "Leomotors Monorepo",
-      link: "https://github.com/Leomotors/Leomotors",
-      desc: "Monorepo including my main homepage, resume and portfolio you may be seeing right now. And other scripts such as data scraper.",
+      title: "Daydream Cafe",
+      link: "https://github.com/Leomotors/daydream-cafe",
+      desc: "Monorepo for all my website under leomotors.me, website you may be seeing right now.",
       language: "TypeScript",
       img: "images/leomotors-www.webp",
     },
@@ -125,12 +125,6 @@ export const projects = {
     },
   ],
   big_projects: [
-    {
-      title: "CU Get Reg",
-      link: "https://github.com/thinc-org/cugetreg",
-      desc: "Collaborated to CU Get Reg, the app to help plan enrolling courses in Chulalongkorn University. Used by most of Chulalongkorn Students because it is very useful app.",
-      img: "https://user-images.githubusercontent.com/33742791/142388797-fa14bcfa-b01e-45ab-a271-bfdeeb26285f.png",
-    },
     {
       title: "Food Busters",
       link: "https://github.com/Food-Busters",

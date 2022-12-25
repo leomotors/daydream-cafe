@@ -7,6 +7,7 @@
     educations,
     fullVersionLink,
     interests,
+    ossContrib,
     projects,
     sourceLink,
     technologies,
@@ -18,6 +19,7 @@
   import Certificate from "$components/Certificate.svelte";
   import HideToggle from "$components/HideToggle.svelte";
   import Intro from "$components/Intro.svelte";
+  import Project from "$components/Project.svelte";
   import Work from "$components/Work.svelte";
 
   let editMode = false;
@@ -83,11 +85,6 @@
         </tr>
       {/each}
     </table>
-
-    <section>
-      <HideToggle />
-      <p class="-mt-2 pl-8 text-left">...And is open to other technologies</p>
-    </section>
   </section>
 
   <section>
@@ -144,19 +141,24 @@
 
   <section>
     <HideToggle />
+    <h2 class={h2clsx}>Open Source Contribution</h2>
+    <hr />
+
+    <ul>
+      {#each ossContrib as project}
+        <Project {project} />
+      {/each}
+    </ul>
+  </section>
+
+  <section>
+    <HideToggle />
     <h2 class={h2clsx}>Projects</h2>
     <hr />
 
     <ul>
       {#each projects as project}
-        <li>
-          <HideToggle />
-          <strong>{project.name}</strong>
-          - {project.details}
-          <a href="https://{project.url}" target="_blank" rel="noreferrer">
-            <strong>{project.url}</strong>
-          </a>
-        </li>
+        <Project {project} />
       {/each}
     </ul>
   </section>

@@ -1,4 +1,5 @@
 import { activities } from "./activities";
+import { ossContrib as _ossContrib } from "./osscontrib";
 import { projects as _projects } from "./projects";
 import { skills } from "./skills";
 
@@ -33,12 +34,12 @@ export const technologies = [
   {
     section: "Tools (misc):",
     details:
-      "Git, GitHub, VSCode, Visual Studio, zsh, Powershell, ssh, Markdown, LaTeX, Raspberry Pi, PostgreSQL, Turborepo, Figma (View), Storybook",
+      "Git, GitHub, VSCode, Visual Studio, zsh, Powershell, ssh, Markdown, LaTeX, Raspberry Pi, PostgreSQL, Turborepo, Figma (View), Storybook, Docker, Docker Compose",
   },
   {
     section: "IaaS, PaaS:",
     details:
-      "Vercel, Netlify, GitHub Pages, Github Actions, Firebase (Firestore & Realtime Database), DigitalOcean (Droplet), Microsoft Azure (Functions & VM)",
+      "Vercel, Netlify, GitHub Pages, Github Actions, Firebase (Firestore & Realtime Database), DigitalOcean (Droplet), Microsoft Azure",
   },
 ];
 
@@ -97,6 +98,12 @@ export const projects = [..._projects.big_projects, ..._projects.featured]
     details: o.resume_desc ?? o.desc,
     url: o.link.replace(/^https?:\/\//, ""),
   }));
+
+export const ossContrib = _ossContrib.map((o) => ({
+  name: o.title,
+  details: o.resume_desc ?? o.desc,
+  url: o.link.replace(/^https?:\/\//, ""),
+}));
 
 export const interests = [
   "Areas: RGB, Mechanical Keyboard, Anime, Dual Monitor Desk Setup, Windows Insider",
