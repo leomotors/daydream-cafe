@@ -129,7 +129,10 @@ importers:
       '@daydream-cafe/config': link:../config
 
   packages/data:
-    specifiers: {}
+    specifiers:
+      '@daydream-cafe/constants': workspace:0.0.0
+    dependencies:
+      '@daydream-cafe/constants': link:../constants
 
 packages:
 

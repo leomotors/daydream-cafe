@@ -1,3 +1,5 @@
+import { Links } from "@daydream-cafe/constants";
+
 import { activities } from "./activities";
 import { ossContrib as _ossContrib } from "./osscontrib";
 import { projects as _projects } from "./projects";
@@ -11,10 +13,10 @@ export const sourceLink = "https://github.com/Leomotors/Leomotors";
 export const introData = {
   name: "Nutthapat Pongtanyavichai",
   nickname: "Leo",
-  github: "Leomotors",
-  linkedin: "leo-nutthapat",
+  github: Links.last(Links.github),
+  linkedin: Links.last(Links.linkedin),
   location: "Bangkok, Thailand",
-  website: "leomotors.net",
+  website: Links.last(Links.www),
 };
 
 export const technologies = [

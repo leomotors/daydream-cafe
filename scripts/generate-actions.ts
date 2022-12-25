@@ -83,7 +83,7 @@ jobs:
 
 const projects = [
   {
-    package: "resume.leomotors.net",
+    package: "resume.leomotors.me",
     path: "apps/resume",
     project: "resume-leomotors",
     short: "resume",

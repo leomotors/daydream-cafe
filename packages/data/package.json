@@ -17,5 +17,8 @@
   "scripts": {
     "lint": "eslint src --max-warnings=0",
     "format": "eslint src --fix"
+  },
+  "dependencies": {
+    "@daydream-cafe/constants": "workspace:0.0.0"
   }
 }
