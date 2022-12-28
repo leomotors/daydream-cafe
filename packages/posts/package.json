@@ -1,0 +1,32 @@
+{
+  "name": "@daydream-cafe/posts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.ts",
+  "exports": {
+    ".": "./dist/index.ts",
+    "./staticPaths": "./dist/staticPaths.js"
+  },
+  "typesVersions": {
+    "*": {
+      "staticPaths": [
+        "src/types/staticPaths.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "dev": "nodemon --watch posts --watch src --ext ts,md --exec pnpm hot-build",
+    "hot-build": "tsx src/index.ts",
+    "build": "rm -rf dist && mkdir dist && tsx src/index.ts"
+  },
+  "devDependencies": {
+    "@traptitech/markdown-it-katex": "^3.6.0",
+    "@types/markdown-it": "^12.2.3",
+    "markdown-it": "^13.0.1",
+    "markdown-it-highlightjs": "^4.0.1",
+    "markdown-it-katex": "^2.0.3",
+    "nodemon": "^2.0.20",
+    "tsx": "^3.12.1"
+  }
+}

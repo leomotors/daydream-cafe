@@ -4,7 +4,7 @@
 const config = {
   content: [
     "./src/**/*.{html,js,svelte,ts,css,scss}",
-    "../../packages/ui/src/**/*.{html,js,svelte,ts,css,scss}",
+    "../../packages/posts/dist/*.svelte",
   ],
   darkMode: "class",
   theme: {
@@ -14,6 +14,7 @@ const config = {
       },
     },
   },
+  plugins: [require("@tailwindcss/typography")],
 };
 
 module.exports = config;

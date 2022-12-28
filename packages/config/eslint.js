@@ -28,7 +28,7 @@ const config = {
       },
     },
   ],
-  ignorePatterns: ["**/build/**"],
+  ignorePatterns: ["**/build/**", "**/dist/**"],
   rules: {
     "prettier/prettier": "warn",
     "import/order": [

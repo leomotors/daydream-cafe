@@ -17,6 +17,8 @@
     "@sveltejs/adapter-static": "1.0.0",
     "@sveltejs/kit": "1.0.1",
     "autoprefixer": "^10.4.13",
+    "highlight.js": "^11.7.0",
+    "katex": "^0.16.4",
     "postcss": "^8.4.20",
     "sass": "^1.57.1",
     "svelte": "^3.55.0",
@@ -29,6 +31,7 @@
     "vite": "^4.0.3"
   },
   "dependencies": {
-    "@daydream-cafe/constants": "workspace:0.0.0"
+    "@daydream-cafe/constants": "workspace:0.0.0",
+    "@daydream-cafe/posts": "workspace:0.0.0"
   }
 }

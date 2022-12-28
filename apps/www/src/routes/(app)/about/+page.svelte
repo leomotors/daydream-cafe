@@ -38,7 +38,7 @@
         <li>
           <p>🏢</p>
           <p>
-            Software Engineer at
+            Platform Engineer at
             <ExtLink href="https://brikl.com/jobs">Brikl</ExtLink>
           </p>
         </li>
