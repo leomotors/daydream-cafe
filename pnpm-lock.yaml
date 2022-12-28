@@ -148,7 +148,6 @@ importers:
       '@types/markdown-it': ^12.2.3
       markdown-it: ^13.0.1
       markdown-it-highlightjs: ^4.0.1
-      markdown-it-katex: ^2.0.3
       nodemon: ^2.0.20
       tsx: ^3.12.1
     devDependencies:
@@ -156,7 +155,6 @@ importers:
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
       markdown-it-highlightjs: 4.0.1
-      markdown-it-katex: 2.0.3
       nodemon: 2.0.20
       tsx: 3.12.1
 
@@ -2072,13 +2070,6 @@ packages:
       commander: 8.3.0
     dev: true
 
-  /katex/0.6.0:
-    resolution: {integrity: sha512-rS4mY3SvHYg5LtQV6RBcK0if7ur6plyEukAOV+jGGPqFImuzu8fHL6M752iBmRGoUyF0bhZbAPoezehn7xYksA==}
-    hasBin: true
-    dependencies:
-      match-at: 0.1.1
-    dev: true
-
   /kleur/4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
@@ -2142,12 +2133,6 @@ packages:
       highlight.js: 11.7.0
     dev: true
 
-  /markdown-it-katex/2.0.3:
-    resolution: {integrity: sha512-nUkkMtRWeg7OpdflamflE/Ho/pWl64Lk9wNBKOmaj33XkQdumhXAIYhI0WO03GeiycPCsxbmX536V5NEXpC3Ng==}
-    dependencies:
-      katex: 0.6.0
-    dev: true
-
   /markdown-it/13.0.1:
     resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}
     hasBin: true
@@ -2157,10 +2142,6 @@ packages:
       linkify-it: 4.0.1
       mdurl: 1.0.1
       uc.micro: 1.0.6
-    dev: true
-
-  /match-at/0.1.1:
-    resolution: {integrity: sha512-h4Yd392z9mST+dzc+yjuybOGFNOZjmXIPKWjxBd1Bb23r4SmDOsk2NYCU2BMUBGbSpZqwVsZYNq26QS3xfaT3Q==}
     dev: true
 
   /mdurl/1.0.1:
