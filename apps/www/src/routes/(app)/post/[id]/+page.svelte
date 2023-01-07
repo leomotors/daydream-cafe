@@ -6,5 +6,5 @@
 </script>
 
 <article class="prose prose-lg m-4 mx-auto rounded-xl bg-white p-8">
-  {@html data.Content}
+  {@html data.content}
 </article>
