@@ -2,9 +2,9 @@
   import type { PageData } from "./$types";
 
   export let data: PageData;
-  $: ({ Content } = data);
+  // $: ({ Content } = data);
 </script>
 
 <article class="prose prose-lg m-4 mx-auto rounded-xl bg-white p-8">
-  <svelte:component this={Content} />
+  {@html data.Content}
 </article>

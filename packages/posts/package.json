@@ -5,7 +5,6 @@
   "type": "module",
   "main": "dist/index.ts",
   "exports": {
-    ".": "./dist/index.ts",
     "./staticPaths": "./dist/staticPaths.js"
   },
   "typesVersions": {
@@ -21,6 +20,7 @@
     "build": "rm -rf dist && mkdir dist && tsx src/index.ts"
   },
   "devDependencies": {
+    "@daydream-cafe/config": "workspace:0.0.0",
     "@traptitech/markdown-it-katex": "^3.6.0",
     "@types/markdown-it": "^12.2.3",
     "markdown-it": "^13.0.1",

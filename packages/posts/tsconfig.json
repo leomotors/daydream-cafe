@@ -1,0 +1,3 @@
+{
+  "extends": "@daydream-cafe/config/tsconfig-app.json"
+}
