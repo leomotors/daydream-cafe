@@ -1,10 +1,10 @@
 import { introData as baseIntroData } from "@daydream-cafe/data/resume";
 
 import { dev } from "$app/environment";
-import { PUBLIC_EMAIL, PUBLIC_PHONE } from "$env/static/public";
+import { env } from "$env/dynamic/public";
 
 export const introData = {
   ...baseIntroData,
-  phone: dev ? PUBLIC_PHONE : "",
-  email: dev ? PUBLIC_EMAIL : "",
+  phone: dev ? env.PUBLIC_PHONE : "",
+  email: dev ? env.PUBLIC_EMAIL : "",
 };
