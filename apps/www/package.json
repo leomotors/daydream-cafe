@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite dev --port=5910",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --port=4910",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "eslint . --max-warnings=0 && prettier --check \"src/**/*.{js,ts,svelte,scss}\"",

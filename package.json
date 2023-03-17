@@ -9,6 +9,7 @@
   "scripts": {
     "build": "FORCE_COLOR=2 turbo run build",
     "dev": "FORCE_COLOR=2 turbo run dev --parallel",
+    "preview": "FORCE_COLOR=2 turbo run preview --parallel",
     "lint": "FORCE_COLOR=2 turbo run lint",
     "format": "FORCE_COLOR=2 turbo run format"
   },
