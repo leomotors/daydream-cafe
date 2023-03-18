@@ -8,8 +8,7 @@ _yes, nothing related to Daydream cafe_
 ## Apps
 
 - www -> https://leomotors.me
-- portfolio -> (not implemented)
-- resume -> (not implemented)
+- resume -> https://resume.leomotors.me
 
 ## Packages
 
