@@ -1,6 +1,8 @@
 import fs from "node:fs/promises";
 
 export async function writeStaticPaths(files: string[]) {
+  await fs.mkdir("dist").catch(() => null);
+
   await fs.writeFile(
     "dist/staticPaths.js",
     `

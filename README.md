@@ -14,7 +14,8 @@ _yes, nothing related to Daydream cafe_
 
 - config
 - constants
-- data (Not implemented)
+- data -> for shared data between resume and portfolio (coming soon?)
+- posts -> for blog posts in https://leomotors.me
 
 ## Tech Stack
 
