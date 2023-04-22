@@ -2,7 +2,7 @@
 title: Markdown Parser Testing
 description: Testing out markdown parser
 tags: [test]
-updated: 230101
+updated: 230422
 image: https://leosigh.com/wp-content/uploads/2022/08/The-Angel-Next-Door-Spoils-Me-Rotten-Mahiru-Shiina.jpg
 ---
 
@@ -17,22 +17,22 @@ This is lead paragraph
 > This is some quote
 
 lorem ipsum for testing my custom blog engine. Powered by SvelteKit and power
-of turborepo. All blog posts are statically generated.
+of turborepo. All blog posts are statically generated/rendered at build time.
 
-When `build` is run in `@daydream-cafe/posts`, it grab all markdown files in `posts/`
-pre-render it and convert rendered html into valid Svelte Component.
-
-It then generates neccessary exports.
+On page endpoint `page.server.ts`, it reads the blog post and render it.
+`@daydream-cafe/posts:build` generate static JavaScript file that tell
+SvelteKit what path to prerender when building the app.
 
 Posts are styled by `@tailwindcss/typography`.
 The code blocks are styled by `highlight.js`'s css.
 And KaTeX is styled by thicc katex css with thicc fonts.
 Bundle Size is big for blog posts but not a big problem.
 
-My previous markdown renderer are written as vite plugin which suck
+This markdown parser is tolerance to all kinds of chaos.
+(except XSS, all are my content so prob no problem)
 
-- It cannot use "Double Quote" properly without workaround
-- Also this \n boi, '\n'
+- "Double Quote"
+- \n boi, '\n'
 
 Some random stuff.
 
@@ -115,6 +115,4 @@ $\int_{0}^{\pi} cosx\ dx$
 
 ## NEW!
 
-Svelte should not be scared of {{ wtf }} {{{{{{{{{}}}}}}}}}
-
-[NEXT POST](/post/221229-some-posts)
+Svelte should not be scared of {{ brackets }} {{{{{{{{{}}}}}}}}}
