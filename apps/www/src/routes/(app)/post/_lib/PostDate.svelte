@@ -1,6 +1,6 @@
 <script lang="ts">
   export let writtenAt: string;
-  export let updated: string = "";
+  export let updated = "";
 </script>
 
 <p>

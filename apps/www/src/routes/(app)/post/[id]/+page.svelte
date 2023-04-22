@@ -1,6 +1,7 @@
 <script lang="ts">
   import PostDate from "../_lib/PostDate.svelte";
   import Tags from "../_lib/Tags.svelte";
+
   import type { PageServerData } from "./$types";
 
   export let data: PageServerData;
