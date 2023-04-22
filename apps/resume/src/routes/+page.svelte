@@ -203,7 +203,7 @@
   }
 
   section hr {
-    @apply mt-0 mb-2;
+    @apply mb-2 mt-0;
     border-color: darkgrey;
   }
 
@@ -241,7 +241,7 @@
     }
 
     section hr {
-      @apply mt-0 mb-1;
+      @apply mb-1 mt-0;
     }
 
     main {
