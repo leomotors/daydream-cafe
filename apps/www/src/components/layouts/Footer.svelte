@@ -4,9 +4,11 @@
 
 <footer class="self-center">
   <div class="flex flex-col items-center gap-2 sm:flex-row">
-    <p>Source Code of this website is available on</p>
+    <p class="text-sm sm:text-base">
+      Source Code of this website is available on
+    </p>
     <a
-      href="https://github.com/Leomotors/Leomotors"
+      href="https://github.com/Leomotors/daydream-cafe"
       target="_blank"
       rel="noreferrer"
       class="flex items-center gap-1 text-slate-200 transition-colors hover:text-slate-300"

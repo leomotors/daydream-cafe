@@ -8,7 +8,7 @@ import { skills } from "./skills";
 const { proglang } = skills;
 
 export const fullVersionLink = "https://resume.leomotors.net";
-export const sourceLink = "https://github.com/Leomotors/Leomotors";
+export const sourceLink = "https://github.com/Leomotors/daydream-cafe";
 
 export const introData = {
   name: "Nutthapat Pongtanyavichai",
