@@ -15,9 +15,8 @@
     }
   },
   "scripts": {
-    "dev": "nodemon --watch posts --watch src --ext ts,md --exec pnpm hot-build",
-    "hot-build": "tsx src/index.ts",
-    "build": "rm -rf dist && mkdir dist && tsx src/index.ts"
+    "dev": "nodemon --watch posts --watch src --ext ts,md --exec pnpm build",
+    "build": "tsx src/index.ts"
   },
   "devDependencies": {
     "@daydream-cafe/config": "workspace:0.0.0",

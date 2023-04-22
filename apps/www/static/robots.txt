@@ -1,2 +1,3 @@
 User-agent: *
-Allow: /
+Disallow: /cunny
+Disallow: /jobs

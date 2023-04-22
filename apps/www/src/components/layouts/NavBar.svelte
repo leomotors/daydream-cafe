@@ -1,7 +1,7 @@
 <nav>
   <a href="/">Home</a> |
   <a href="/about">About</a> |
-  <a href="/post">Post</a>
+  <a href="/post">Posts</a>
 </nav>
 
 <style lang="scss">
