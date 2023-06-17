@@ -20,11 +20,11 @@
   },
   "devDependencies": {
     "@daydream-cafe/config": "workspace:0.0.0",
-    "@traptitech/markdown-it-katex": "^3.6.0",
-    "@types/markdown-it": "^12.2.3",
-    "markdown-it": "^13.0.1",
-    "markdown-it-highlightjs": "^4.0.1",
-    "nodemon": "^2.0.22",
-    "tsx": "^3.12.7"
+    "@traptitech/markdown-it-katex": "3.6.0",
+    "@types/markdown-it": "12.2.3",
+    "markdown-it": "13.0.1",
+    "markdown-it-highlightjs": "4.0.1",
+    "nodemon": "2.0.22",
+    "tsx": "3.12.7"
   }
 }
