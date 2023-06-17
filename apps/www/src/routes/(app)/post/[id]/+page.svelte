@@ -28,5 +28,7 @@
 <article
   class="prose prose-invert m-4 mx-auto w-full max-w-4xl rounded-xl sm:prose-lg"
 >
+  <!-- Trusted Content -->
+  <!-- eslint-disable-next-line svelte/no-at-html-tags -->
   {@html data.content}
 </article>

@@ -1,36 +1,30 @@
 // @ts-check
 
-/** @type {import("eslint").Linter.Config} */
+/** @satisfies {import('eslint').Linter.Config} */
 const config = {
   root: true,
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:svelte/recommended",
+    "prettier",
+    "plugin:import/typescript",
+  ],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint", "import"],
+  parserOptions: {
+    sourceType: "module",
+    ecmaVersion: 2020,
+    extraFileExtensions: [".svelte"],
+  },
   env: {
     browser: true,
     es2017: true,
     node: true,
   },
-  parser: "@typescript-eslint/parser",
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "plugin:import/typescript",
-  ],
-  plugins: ["svelte3", "@typescript-eslint", "import"],
-  overrides: [
-    {
-      files: ["*.svelte"],
-      processor: "svelte3/svelte3",
-    },
-    {
-      files: ["*.js"],
-      rules: {
-        "@typescript-eslint/no-var-requires": "off",
-      },
-    },
-  ],
-  ignorePatterns: ["**/build/**", "**/dist/**"],
+
+  ignorePatterns: ["node_modules", "dist", "build", ".svelte-kit"],
   rules: {
-    "prettier/prettier": "warn",
     "import/order": [
       "warn",
       {
@@ -60,16 +54,26 @@ const config = {
     ],
     "import/newline-after-import": ["warn", { count: 1 }],
     "import/no-cycle": "error",
-    "prefer-const": "warn",
-    "@typescript-eslint/no-namespace": "off",
   },
-  settings: {
-    "svelte3/typescript": () => require("typescript"),
-  },
-  parserOptions: {
-    sourceType: "module",
-    ecmaVersion: 2020,
-  },
+  overrides: [
+    {
+      files: ["*.svelte"],
+      parser: "svelte-eslint-parser",
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+      },
+      rules: {
+        // Error parsing SCSS + PostCSS
+        "svelte/valid-compile": "off",
+      },
+    },
+    {
+      files: ["*.js"],
+      rules: {
+        "@typescript-eslint/no-var-requires": "off",
+      },
+    },
+  ],
 };
 
 module.exports = config;
