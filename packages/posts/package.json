@@ -25,6 +25,6 @@
     "markdown-it": "^13.0.1",
     "markdown-it-highlightjs": "^4.0.1",
     "nodemon": "^2.0.22",
-    "tsx": "^3.12.6"
+    "tsx": "^3.12.7"
   }
 }
