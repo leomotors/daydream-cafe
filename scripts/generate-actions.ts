@@ -34,9 +34,6 @@ const jobTemplate = (args: IArgs) =>
           node-version-file: '.nvmrc'
           cache: pnpm
 
-      - name: Enable Corepack
-        run: corepack enable
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 

@@ -33,9 +33,6 @@ jobs:
           node-version-file: '.nvmrc'
           cache: pnpm
 
-      - name: Enable Corepack
-        run: corepack enable
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -75,9 +72,6 @@ jobs:
         with:
           node-version-file: '.nvmrc'
           cache: pnpm
-
-      - name: Enable Corepack
-        run: corepack enable
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
