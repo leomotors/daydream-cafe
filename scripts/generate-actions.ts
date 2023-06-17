@@ -25,6 +25,9 @@ const jobTemplate = (args: IArgs) =>
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
       - name: Setup node with cache
         uses: actions/setup-node@v3
         with:
