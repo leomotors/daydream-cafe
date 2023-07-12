@@ -3,7 +3,7 @@
 /** @type {import("tailwindcss").Config} */
 const config = {
   content: [
-    "./src/**/*.{html,js,svelte,ts,css,scss}",
+    "./src/**/*.{html,js,svelte,ts,css,scss,astro}",
     "../../packages/posts/dist/*.svelte",
   ],
   darkMode: "class",

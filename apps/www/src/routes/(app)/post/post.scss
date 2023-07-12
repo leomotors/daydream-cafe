@@ -1,8 +1,0 @@
-.imageCard {
-  @apply rounded-2xl bg-cover bg-center;
-
-  & > div {
-    @apply flex h-full w-full flex-col items-center justify-center gap-4 p-4;
-    @apply rounded-2xl bg-black/75 transition-colors hover:bg-black/70;
-  }
-}

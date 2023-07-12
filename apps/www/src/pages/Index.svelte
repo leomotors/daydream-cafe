@@ -8,7 +8,7 @@
   import Linkedin from "svelte-bootstrap-icons/lib/Linkedin.svelte";
   import Twitter from "svelte-bootstrap-icons/lib/Twitter.svelte";
 
-  import { CgWebring, LinkButton } from "$components/elements";
+  import { CgWebring, LinkButton } from "../components";
 </script>
 
 <main class="flex flex-col items-center gap-4 text-center">

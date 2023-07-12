@@ -3,7 +3,7 @@
   import Award from "svelte-bootstrap-icons/lib/Award.svelte";
   import Briefcase from "svelte-bootstrap-icons/lib/Briefcase.svelte";
 
-  import { ExtLink, Image, LinkButton } from "$components/elements";
+  import { ExtLink, Image, LinkButton } from "../components";
 </script>
 
 <main>
