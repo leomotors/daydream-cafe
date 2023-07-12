@@ -1,11 +1,19 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
 import RootLayout from '../../layouts/RootLayout.astro';
+import Header from "./Header.svelte"
 
 export async function getStaticPaths() {
+
+function formatSlug(slug: string) {
+	return slug.split("-").slice(1).join("-")
+}
+
 	const posts = await getCollection('blog');
 	return posts.map((post) => ({
-		params: { slug: post.slug },
+		params: { 
+			slug: formatSlug(post.slug),
+		},
 		props: post,
 	}));
 }
@@ -17,18 +25,7 @@ const { Content } = await post.render();
 ---
 
 <RootLayout>
-	<!-- <div
-  style={data.meta.image && `background-image: url(${data.meta.image})`}
-  class="imageCard mx-auto aspect-[4/1] w-[calc(100vw-8rem)]"
->
-  <div>
-    <p class="text-4xl font-bold">{data.meta.title}</p>
-    <p class="text-3xl">{data.meta.description}</p>
-    <PostDate writtenAt={data.meta.writtenAt} updated={data.meta.updated} />
-
-    <Tags clsx="text-xl" tags={data.meta.tags} />
-  </div>
-</div> -->
+	<Header post={post} />
 
 	<article
   class="prose prose-invert m-4 mx-auto w-full max-w-4xl rounded-xl sm:prose-lg"
