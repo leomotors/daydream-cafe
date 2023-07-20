@@ -1,15 +1,15 @@
 ---
-import "../styles.css"
+import "../styles.css";
 
 export interface Props {
-	title: string;
-	description: string;
-	image?: string;
+  title: string;
+  description: string;
+  image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
+const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -42,6 +42,6 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 
 <!-- Font -->
 <link
-rel="stylesheet"
-href="https://fonts.googleapis.com/css?family=Inter:r,b&display=swap"
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Inter:r,b&display=swap"
 />

@@ -148,7 +148,7 @@ export const Button: FC<ButtonProps> = ({ children }) => {
 -+-+[>>>>..]
 ```
 
-```c++
+```cpp
 #include <iostream>
 // bruh don't do this
 using namespace std;
@@ -193,12 +193,12 @@ const a = `${bruh} yes`;
 
 an really long sentences Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure a harum libero consequuntur culpa eveniet accusantium laudantium quia, quod quos perspiciatis, quas commodi modi eos, ab quis. Mollitia odit assumenda molestias praesentium maxime fuga ut temporibus vero voluptatibus quisquam ipsum facilis quam officia aliquid cum, iste, error quae ab. Excepturi, ab? Reprehenderit, praesentium laboriosam? Suscipit quam molestiae tempore expedita vitae officia minima nesciunt, omnis recusandae assumenda autem repellendus libero optio, repudiandae voluptates harum ducimus nostrum odio, a quia illo sunt eaque. Quibusdam molestiae, deserunt eaque eligendi reiciendis dolorum quo, est eius dolor nemo voluptatem animi minus repellendus. Deserunt, consequuntur reiciendis!
 
-## NEW! Test Katex
+## Test Katex
 
 pls work pls
 
 $\int_{0}^{\pi} cosx\ dx$
 
-## NEW!
+## bracket test
 
-Svelte should not be scared of {{ brackets }} {{{{{{{{{}}}}}}}}}
+broken {{{{{{}}}}}} {{{ }{{}{{

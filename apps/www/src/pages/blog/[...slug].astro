@@ -1,35 +1,36 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
-import RootLayout from '../../layouts/RootLayout.astro';
-import Header from "./Header.svelte"
+import { CollectionEntry, getCollection } from "astro:content";
+import RootLayout from "../../layouts/RootLayout.astro";
+import Header from "./Header.svelte";
+
+import "katex/dist/katex.min.css";
 
 export async function getStaticPaths() {
+  function formatSlug(slug: string) {
+    return slug.split("-").slice(1).join("-");
+  }
 
-function formatSlug(slug: string) {
-	return slug.split("-").slice(1).join("-")
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: {
+      slug: formatSlug(post.slug),
+    },
+    props: post,
+  }));
 }
 
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { 
-			slug: formatSlug(post.slug),
-		},
-		props: post,
-	}));
-}
-
-type Props = CollectionEntry<'blog'>;
+type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
 const { Content } = await post.render();
 ---
 
 <RootLayout>
-	<Header post={post} />
+  <Header post={post} />
 
-	<article
-  class="prose prose-invert m-4 mx-auto w-full max-w-4xl rounded-xl sm:prose-lg"
-	>
-		<Content />
-	</article>
+  <article
+    class="prose prose-invert m-4 mx-auto w-full max-w-4xl rounded-xl sm:prose-lg"
+  >
+    <Content />
+  </article>
 </RootLayout>

@@ -1,9 +1,11 @@
 <script lang="ts">
   import type { CollectionEntry } from "astro:content";
-  import styles from "./blog.module.scss";
+
   import PostDate from "./PostDate.svelte";
   import Tags from "./Tags.svelte";
+  import styles from "./blog.module.scss";
   import { formatDate, toDate } from "./utils";
+
   export let post: CollectionEntry<"blog">;
 </script>
 

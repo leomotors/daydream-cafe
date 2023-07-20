@@ -8,7 +8,9 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview --port 4910",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint src",
+    "format": "eslint src --fix"
   },
   "dependencies": {
     "@astrojs/mdx": "0.19.7",
@@ -19,6 +21,9 @@
     "@daydream-cafe/constants": "workspace:*",
     "astro": "2.8.5",
     "clsx": "2.0.0",
+    "katex": "0.16.8",
+    "rehype-katex": "6.0.3",
+    "remark-math": "5.1.1",
     "sass": "1.64.0",
     "svelte": "4.1.0",
     "svelte-bootstrap-icons": "3.0.0",
