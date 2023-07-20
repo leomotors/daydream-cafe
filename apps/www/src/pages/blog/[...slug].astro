@@ -4,18 +4,15 @@ import { CollectionEntry, getCollection } from "astro:content";
 import RootLayout from "../../layouts/RootLayout.astro";
 
 import Header from "./Header.svelte";
+import { stripSlug } from "./utils";
 
 import "katex/dist/katex.min.css";
 
 export async function getStaticPaths() {
-  function formatSlug(slug: string) {
-    return slug.split("-").slice(1).join("-");
-  }
-
   const posts = await getCollection("blog");
   return posts.map((post) => ({
     params: {
-      slug: formatSlug(post.slug),
+      slug: stripSlug(post.slug),
     },
     props: post,
   }));
@@ -27,7 +24,11 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<RootLayout>
+<RootLayout
+  title={post.data.title}
+  description={post.data.description}
+  image={post.data.image}
+>
   <Header post={post} />
 
   <article

@@ -15,3 +15,7 @@ export function formatDate(date: Date) {
     date.getDate(),
   )}`;
 }
+
+export function stripSlug(slug: string) {
+  return slug.split("-").slice(1).join("-");
+}
