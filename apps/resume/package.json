@@ -9,8 +9,8 @@
     "preview": "vite preview --port=4911",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "eslint . --max-warnings=0 && prettier --check \"src/**/*.{js,ts,svelte,scss}\"",
-    "format": "eslint . --fix && prettier --write \"src/**/*.{js,ts,svelte,scss}\""
+    "lint": "eslint . --max-warnings=0 && prettier --check \"src/**/*.{css,scss}\"",
+    "format": "eslint . --fix && prettier --write \"src/**/*.{css,scss}\""
   },
   "devDependencies": {
     "@daydream-cafe/config": "workspace:0.0.0",

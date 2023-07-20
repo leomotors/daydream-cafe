@@ -12,6 +12,6 @@ export function toDate(dateNum: number) {
 
 export function formatDate(date: Date) {
   return `${date.getFullYear()}-${addZero(date.getMonth() + 1)}-${addZero(
-    date.getDate()
+    date.getDate(),
   )}`;
 }

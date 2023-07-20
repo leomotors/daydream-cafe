@@ -1,14 +1,14 @@
-export { activities } from "./activities";
-export type { IActivity } from "./activities";
+export { activities } from "./activities.js";
+export type { IActivity } from "./activities.js";
 
-export { certificates } from "./certificates";
-export type { ICertificate } from "./certificates";
+export { certificates } from "./certificates.js";
+export type { ICertificate } from "./certificates.js";
 
-export { ossContrib } from "./osscontrib";
-export type { IOSSContrib } from "./osscontrib";
+export { ossContrib } from "./osscontrib.js";
+export type { IOSSContrib } from "./osscontrib.js";
 
-export { projects } from "./projects";
-export type { IProject } from "./projects";
+export { projects } from "./projects.js";
+export type { IProject } from "./projects.js";
 
-export { skills } from "./skills";
-export type { ISkill } from "./skills";
+export { skills } from "./skills.js";
+export type { ISkill } from "./skills.js";

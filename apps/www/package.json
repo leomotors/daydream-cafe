@@ -1,16 +1,16 @@
 {
   "name": "leomotors.me",
-  "type": "module",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
     "dev": "astro dev --port 5900",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview --port 4910",
     "astro": "astro",
-    "lint": "eslint src",
-    "format": "eslint src --fix"
+    "lint": "eslint src && prettier --check \"src/**/*.{css,scss,md}\"",
+    "format": "eslint src --fix && prettier --write \"src/**/*.{css,scss,md}\""
   },
   "dependencies": {
     "@astrojs/mdx": "0.19.7",

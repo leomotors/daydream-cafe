@@ -14,12 +14,21 @@ importers:
       '@types/node':
         specifier: 18.16.18
         version: 18.16.18
+      autoprefixer:
+        specifier: 10.4.14
+        version: 10.4.14(postcss@8.4.26)
       bun-types:
         specifier: 0.6.14
         version: 0.6.14
+      postcss:
+        specifier: 8.4.26
+        version: 8.4.26
       prettier:
         specifier: 3.0.0
         version: 3.0.0
+      tailwindcss:
+        specifier: 3.3.3
+        version: 3.3.3
       turbo:
         specifier: 1.10.9
         version: 1.10.9
@@ -148,6 +157,9 @@ importers:
       eslint-config-prettier:
         specifier: 8.8.0
         version: 8.8.0(eslint@8.45.0)
+      eslint-plugin-astro:
+        specifier: 0.27.2
+        version: 0.27.2(eslint@8.45.0)
       eslint-plugin-import:
         specifier: 2.27.5
         version: 2.27.5(@typescript-eslint/parser@6.1.0)(eslint@8.45.0)
@@ -339,9 +351,9 @@ packages:
       tailwindcss: ^3.0.24
     dependencies:
       astro: 2.8.5(@types/node@18.16.18)(sass@1.64.0)
-      autoprefixer: 10.4.14(postcss@8.4.24)
-      postcss: 8.4.24
-      postcss-load-config: 4.0.1(postcss@8.4.24)
+      autoprefixer: 10.4.14(postcss@8.4.26)
+      postcss: 8.4.26
+      postcss-load-config: 4.0.1(postcss@8.4.26)
       tailwindcss: 3.3.3
     transitivePeerDependencies:
       - ts-node
@@ -1406,6 +1418,14 @@ packages:
       - supports-color
     dev: true
 
+  /@typescript-eslint/scope-manager@5.62.0:
+    resolution: {integrity: sha512-VXuvVvZeQCQb5Zgf4HAxc04q5j+WrNAtNh9OwCsCgpKqESMTu3tF/jhZ3xG6T4NZwWl65Bg8KuS2uEvhSfLl0w==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dependencies:
+      '@typescript-eslint/types': 5.62.0
+      '@typescript-eslint/visitor-keys': 5.62.0
+    dev: true
+
   /@typescript-eslint/scope-manager@6.1.0:
     resolution: {integrity: sha512-AxjgxDn27hgPpe2rQe19k0tXw84YCOsjDJ2r61cIebq1t+AIxbgiXKvD4999Wk49GVaAcdJ/d49FYel+Pp3jjw==}
     engines: {node: ^16.0.0 || >=18.0.0}
@@ -1432,6 +1452,11 @@ packages:
       typescript: 5.1.6
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@typescript-eslint/types@5.62.0:
+    resolution: {integrity: sha512-87NVngcbVXUahrRTqIK27gD2t5Cu1yuCXxbLcFtCzZGlfyVWWh8mLHkoxzjsB6DDNnvdL+fW8MiwPEJyGJQDgQ==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
   /@typescript-eslint/types@6.1.0:
@@ -1477,6 +1502,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - typescript
+    dev: true
+
+  /@typescript-eslint/visitor-keys@5.62.0:
+    resolution: {integrity: sha512-07ny+LHRzQXepkGg6w0mFY41fVUNBrL2Roj/++7V1txKugfjm/Ci/qSND03r2RhlJhJYMcTn9AhhSSqQp0Ysyw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dependencies:
+      '@typescript-eslint/types': 5.62.0
+      eslint-visitor-keys: 3.4.1
     dev: true
 
   /@typescript-eslint/visitor-keys@6.1.0:
@@ -1638,6 +1671,22 @@ packages:
     hasBin: true
     dev: false
 
+  /astro-eslint-parser@0.14.0:
+    resolution: {integrity: sha512-3F8l1h7+5MNxzDg1cSQxEloalG7fj64K6vOERChUVG7RLnAzSoafADnPQlU8DpMM3WRNfRHSC4NwUCORk/aPrA==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    dependencies:
+      '@astrojs/compiler': 1.6.0
+      '@typescript-eslint/scope-manager': 5.62.0
+      '@typescript-eslint/types': 5.62.0
+      astrojs-compiler-sync: 0.3.3(@astrojs/compiler@1.6.0)
+      debug: 4.3.4
+      eslint-visitor-keys: 3.4.1
+      espree: 9.6.1
+      semver: 7.5.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /astro@2.8.5(@types/node@18.16.18)(sass@1.64.0):
     resolution: {integrity: sha512-qfPUKLpZ9lVi5Hc5MrzyekUUx54AyrEphW5eetNQj/+d0iodHEneZXFDzZxTEsk3rL8Y2Y9pYFXJPmQB3eahUA==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
@@ -1715,21 +1764,15 @@ packages:
       - terser
     dev: false
 
-  /autoprefixer@10.4.14(postcss@8.4.24):
-    resolution: {integrity: sha512-FQzyfOsTlwVzjHxKEqRIAdJx9niO6VCBCoEwax/VLSoQF29ggECcPuBqUMZ+u8jCZOPSy8b8/8KnuFbp0SaFZQ==}
-    engines: {node: ^10 || ^12 || >=14}
-    hasBin: true
+  /astrojs-compiler-sync@0.3.3(@astrojs/compiler@1.6.0):
+    resolution: {integrity: sha512-LbhchWgsvjvRBb5n5ez8/Q/f9ZKViuox27VxMDOdTUm8MRv9U7phzOiLue5KluqTmC0z1LId4gY2SekvoDrkuw==}
+    engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      postcss: ^8.1.0
+      '@astrojs/compiler': '>=0.27.0'
     dependencies:
-      browserslist: 4.21.9
-      caniuse-lite: 1.0.30001503
-      fraction.js: 4.2.0
-      normalize-range: 0.1.2
-      picocolors: 1.0.0
-      postcss: 8.4.24
-      postcss-value-parser: 4.2.0
-    dev: false
+      '@astrojs/compiler': 1.6.0
+      synckit: 0.8.5
+    dev: true
 
   /autoprefixer@10.4.14(postcss@8.4.26):
     resolution: {integrity: sha512-FQzyfOsTlwVzjHxKEqRIAdJx9niO6VCBCoEwax/VLSoQF29ggECcPuBqUMZ+u8jCZOPSy8b8/8KnuFbp0SaFZQ==}
@@ -1745,7 +1788,6 @@ packages:
       picocolors: 1.0.0
       postcss: 8.4.26
       postcss-value-parser: 4.2.0
-    dev: true
 
   /available-typed-arrays@1.0.5:
     resolution: {integrity: sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==}
@@ -2389,6 +2431,23 @@ packages:
       debug: 3.2.7
       eslint: 8.45.0
       eslint-import-resolver-node: 0.3.7
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /eslint-plugin-astro@0.27.2(eslint@8.45.0):
+    resolution: {integrity: sha512-MUEkKXvj4onjq9/IyLMfbg8nUjY+SznhHcOvKDnHLgqzGzxUEoaOTR+mPZrDIyqAPC716GxpjsK9MDgoYLPyFA==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      '@eslint-community/eslint-utils': 4.4.0(eslint@8.45.0)
+      '@jridgewell/sourcemap-codec': 1.4.15
+      '@typescript-eslint/types': 5.62.0
+      astro-eslint-parser: 0.14.0
+      eslint: 8.45.0
+      postcss: 8.4.26
+      postcss-selector-parser: 6.0.13
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4539,23 +4598,6 @@ packages:
       yaml: 1.10.2
     dev: true
 
-  /postcss-load-config@4.0.1(postcss@8.4.24):
-    resolution: {integrity: sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==}
-    engines: {node: '>= 14'}
-    peerDependencies:
-      postcss: '>=8.0.9'
-      ts-node: '>=9.0.0'
-    peerDependenciesMeta:
-      postcss:
-        optional: true
-      ts-node:
-        optional: true
-    dependencies:
-      lilconfig: 2.1.0
-      postcss: 8.4.24
-      yaml: 2.3.1
-    dev: false
-
   /postcss-load-config@4.0.1(postcss@8.4.26):
     resolution: {integrity: sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==}
     engines: {node: '>= 14'}
@@ -4616,15 +4658,6 @@ packages:
 
   /postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
-
-  /postcss@8.4.24:
-    resolution: {integrity: sha512-M0RzbcI0sO/XJNucsGjvWU9ERWxb/ytp1w6dKtxTKgixdtQDq4rmx/g8W1hnaheq9jgwL/oyEdH5Bc4WwJKMqg==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.6
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
-    dev: false
 
   /postcss@8.4.26:
     resolution: {integrity: sha512-jrXHFF8iTloAenySjM/ob3gSj7pCu0Ji49hnjqzsgSRa50hkWCKD0HQ+gMNJkW38jBI68MpAAg7ZWwHwX8NMMw==}
