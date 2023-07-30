@@ -15,4 +15,5 @@ export default defineConfig({
     rehypePlugins: [rehypeKatex],
   },
   integrations: [sitemap(), tailwind(), svelte()],
+  outDir: "build",
 });
