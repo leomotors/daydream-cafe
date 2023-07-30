@@ -20,6 +20,6 @@
     "format": "eslint src --fix"
   },
   "dependencies": {
-    "@daydream-cafe/constants": "workspace:0.0.0"
+    "@daydream-cafe/constants": "workspace:*"
   }
 }

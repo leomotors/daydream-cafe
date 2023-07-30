@@ -9,6 +9,6 @@
     "format": "eslint src --fix"
   },
   "devDependencies": {
-    "@daydream-cafe/config": "workspace:0.0.0"
+    "@daydream-cafe/config": "workspace:*"
   }
 }

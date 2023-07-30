@@ -13,9 +13,9 @@
     "format": "eslint . --fix && prettier --write \"src/**/*.{css,scss}\""
   },
   "devDependencies": {
-    "@daydream-cafe/config": "workspace:0.0.0",
-    "@daydream-cafe/data": "workspace:0.0.0",
-    "@sveltejs/adapter-static": "2.0.2",
+    "@daydream-cafe/config": "workspace:*",
+    "@daydream-cafe/data": "workspace:*",
+    "@sveltejs/adapter-static": "2.0.3",
     "@sveltejs/kit": "1.22.3",
     "autoprefixer": "10.4.14",
     "postcss": "8.4.27",
@@ -29,6 +29,6 @@
     "vite": "4.4.7"
   },
   "dependencies": {
-    "@daydream-cafe/constants": "workspace:0.0.0"
+    "@daydream-cafe/constants": "workspace:*"
   }
 }
