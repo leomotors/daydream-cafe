@@ -1,0 +1,35 @@
+---
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+
+import BaseHead from "./BaseHead.astro";
+import Footer from "./Footer.svelte";
+import NavBar from "./NavBar.svelte";
+
+type Props = {
+  title?: string;
+  description?: string;
+  image?: string;
+};
+
+const {
+  title = SITE_TITLE,
+  description = SITE_DESCRIPTION,
+  image,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} image={image} />
+  </head>
+  <body>
+    <div
+      class="flex min-h-screen flex-col justify-between gap-16 bg-slate-900 px-1 py-8 text-white"
+    >
+      <NavBar />
+      <slot />
+      <Footer />
+    </div>
+  </body>
+</html>

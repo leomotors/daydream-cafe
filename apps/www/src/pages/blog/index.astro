@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+
+import RootLayout from "../../layouts/RootLayout.astro";
+
+import { stripSlug, toDate } from "./utils";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) =>
+    toDate(+b.id.split("-")[0]).getTime() -
+    toDate(+a.id.split("-")[0]).getTime(),
+);
+---
+
+<RootLayout>
+  {
+    posts.map((post) => (
+      <a href={`/blog/${stripSlug(post.slug)}`}>{post.data.title}</a>
+    ))
+  }
+</RootLayout>

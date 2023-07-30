@@ -4,40 +4,32 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite dev --port=5910",
-    "build": "vite build",
-    "preview": "vite preview --port=4910",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "eslint . --max-warnings=0 && prettier --check \"src/**/*.{js,ts,svelte,scss}\"",
-    "format": "eslint . --fix && prettier --write \"src/**/*.{js,ts,svelte,scss}\""
-  },
-  "devDependencies": {
-    "@daydream-cafe/config": "workspace:0.0.0",
-    "@sveltejs/adapter-static": "2.0.2",
-    "@sveltejs/kit": "1.20.4",
-    "@traptitech/markdown-it-katex": "3.6.0",
-    "@types/markdown-it": "12.2.3",
-    "autoprefixer": "10.4.14",
-    "front-matter": "4.0.2",
-    "highlight.js": "11.8.0",
-    "katex": "0.16.7",
-    "markdown-it": "13.0.1",
-    "markdown-it-highlightjs": "4.0.1",
-    "postcss": "8.4.24",
-    "sass": "1.63.4",
-    "svelte": "3.59.1",
-    "svelte-bootstrap-icons": "2.3.1",
-    "svelte-check": "3.4.3",
-    "svelte-preprocess": "5.0.4",
-    "tailwindcss": "3.3.2",
-    "tslib": "2.5.3",
-    "typescript": "5.1.3",
-    "vite": "4.3.9",
-    "zod": "3.21.4"
+    "dev": "astro dev --port 5900",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview --port 4910",
+    "astro": "astro",
+    "lint": "eslint src && prettier --check \"src/**/*.{css,scss,md}\"",
+    "format": "eslint src --fix && prettier --write \"src/**/*.{css,scss,md}\""
   },
   "dependencies": {
-    "@daydream-cafe/constants": "workspace:0.0.0",
-    "@daydream-cafe/posts": "workspace:0.0.0"
+    "@astrojs/mdx": "0.19.7",
+    "@astrojs/rss": "2.4.3",
+    "@astrojs/sitemap": "2.0.1",
+    "@astrojs/svelte": "3.1.0",
+    "@astrojs/tailwind": "4.0.0",
+    "@daydream-cafe/constants": "workspace:*",
+    "astro": "2.9.6",
+    "clsx": "2.0.0",
+    "katex": "0.16.8",
+    "rehype-katex": "6.0.3",
+    "remark-math": "5.1.1",
+    "sass": "1.64.1",
+    "svelte": "4.1.1",
+    "svelte-bootstrap-icons": "3.0.0",
+    "tailwindcss": "3.3.3"
+  },
+  "devDependencies": {
+    "@daydream-cafe/config": "workspace:*"
   }
 }

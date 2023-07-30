@@ -1,9 +1,9 @@
 import { Links } from "@daydream-cafe/constants";
 
-import { activities } from "./activities";
-import { ossContrib as _ossContrib } from "./osscontrib";
-import { projects as _projects } from "./projects";
-import { skills } from "./skills";
+import { activities } from "./activities.js";
+import { ossContrib as _ossContrib } from "./osscontrib.js";
+import { projects as _projects } from "./projects.js";
+import { skills } from "./skills.js";
 
 const { proglang } = skills;
 
@@ -90,7 +90,7 @@ export const workExperiences = [
 ];
 
 export const awards = [...activities.awards, ...activities.activities].map(
-  (o) => ({ name: o.title, details: o.resume_desc ?? o.desc })
+  (o) => ({ name: o.title, details: o.resume_desc ?? o.desc }),
 );
 
 export const projects = [..._projects.big_projects, ..._projects.featured]

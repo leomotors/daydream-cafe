@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "main": "src/index.ts",
+  "type": "module",
   "exports": {
     ".": "./src/index.ts",
     "./resume": "./src/resume.ts"
@@ -19,6 +20,6 @@
     "format": "eslint src --fix"
   },
   "dependencies": {
-    "@daydream-cafe/constants": "workspace:0.0.0"
+    "@daydream-cafe/constants": "workspace:*"
   }
 }

@@ -1,6 +1,6 @@
 // @ts-check
 
-/** @type {import("prettier").Config} */
+/** @satisfies {import("prettier").Config} */
 const config = {
   bracketSpacing: true,
   tabWidth: 2,
@@ -10,9 +10,17 @@ const config = {
   printWidth: 80,
   plugins: [
     require("prettier-plugin-svelte"),
+    require.resolve("prettier-plugin-astro"),
     require("prettier-plugin-tailwindcss"),
   ],
-  pluginSearchDirs: false,
+  overrides: [
+    {
+      files: "*.astro",
+      options: {
+        parser: "astro",
+      },
+    },
+  ],
 };
 
 module.exports = config;

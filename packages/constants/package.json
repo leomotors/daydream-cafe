@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "main": "src/index.ts",
+  "type": "module",
   "scripts": {
     "lint": "eslint src --max-warnings=0",
     "format": "eslint src --fix"
   },
   "devDependencies": {
-    "@daydream-cafe/config": "workspace:0.0.0"
+    "@daydream-cafe/config": "workspace:*"
   }
 }

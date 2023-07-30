@@ -7,9 +7,7 @@
     "strict": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "experimentalDecorators": true,
     "incremental": true,
-    "noUncheckedIndexedAccess": true,
-    "importHelpers": true
+    "noUncheckedIndexedAccess": true
   }
 }

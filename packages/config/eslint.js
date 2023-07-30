@@ -6,23 +6,23 @@ const config = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:svelte/recommended",
-    "prettier",
+    "plugin:prettier/recommended",
     "plugin:import/typescript",
+    "plugin:svelte/recommended",
+    "plugin:astro/recommended",
   ],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "import"],
   parserOptions: {
     sourceType: "module",
     ecmaVersion: 2020,
-    extraFileExtensions: [".svelte"],
+    extraFileExtensions: [".svelte", ".astro"],
   },
   env: {
     browser: true,
     es2017: true,
     node: true,
   },
-
   ignorePatterns: ["node_modules", "dist", "build", ".svelte-kit"],
   rules: {
     "import/order": [
@@ -56,6 +56,13 @@ const config = {
     "import/no-cycle": "error",
   },
   overrides: [
+    // todo remove this override
+    {
+      files: ["*.d.ts"],
+      rules: {
+        "@typescript-eslint/triple-slash-reference": "off",
+      },
+    },
     {
       files: ["*.svelte"],
       parser: "svelte-eslint-parser",
@@ -68,9 +75,15 @@ const config = {
       },
     },
     {
-      files: ["*.js"],
-      rules: {
-        "@typescript-eslint/no-var-requires": "off",
+      // Define the configuration for `.astro` file.
+      files: ["*.astro"],
+      // Allows Astro components to be parsed.
+      parser: "astro-eslint-parser",
+      // Parse the script in `.astro` as TypeScript by adding the following configuration.
+      // It's the setting you need when using TypeScript.
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+        extraFileExtensions: [".astro"],
       },
     },
   ],

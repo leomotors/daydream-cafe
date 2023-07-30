@@ -1,1 +1,1 @@
-export * as Links from "./links";
+export * as Links from "./links.js";

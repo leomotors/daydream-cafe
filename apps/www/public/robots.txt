@@ -1,0 +1,3 @@
+User-agent: *
+# blog is not done yet
+Disallow: /blog
