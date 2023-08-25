@@ -141,5 +141,6 @@ export const projects = {
         "Setting up servers (DigitalOcean Droplet) and CMS (github.com/cms-dev/cms) to hold a programming contest with over 150 registered contestants. I also created the website for this contest",
       img: "https://avatars.githubusercontent.com/u/104977669?s=200&v=4",
     },
+    // TODO RPKM Users 40k
   ],
 } satisfies Record<string, IProject[]>;
