@@ -23,13 +23,13 @@ const jobTemplate = (args: IArgs) =>
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
 
       - name: Setup node with cache
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           cache: pnpm
