@@ -3,7 +3,6 @@
   import Briefcase from "svelte-bootstrap-icons/lib/Briefcase.svelte";
   import CodeSquare from "svelte-bootstrap-icons/lib/CodeSquare.svelte";
   import GitHub from "svelte-bootstrap-icons/lib/Github.svelte";
-  import JournalRichtext from "svelte-bootstrap-icons/lib/JournalRichtext.svelte";
   import Linkedin from "svelte-bootstrap-icons/lib/Linkedin.svelte";
 
   import { CgWebring, LinkButton } from "../components";
@@ -16,10 +15,6 @@
   <section class="my-2">
     <LinkButton name="Resume" to={Links.resume}>
       <Briefcase width="32" height="32" />
-    </LinkButton>
-
-    <LinkButton name="Blog" to={Links.blog}>
-      <JournalRichtext width="32" height="32" />
     </LinkButton>
 
     <LinkButton name="Repo List" to={Links.repos}>
