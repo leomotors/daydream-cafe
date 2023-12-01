@@ -61,7 +61,7 @@
     <section>
       <Image
         class="aspect-square w-56 max-w-xs rounded-full shadow-2xl sm:w-80"
-        src="leo_read_kob_book"
+        src="/leo_read_kob_book"
         alt="Me reading Kob's Book"
       />
     </section>
