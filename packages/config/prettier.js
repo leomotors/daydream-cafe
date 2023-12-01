@@ -11,7 +11,7 @@ const config = {
   plugins: [
     require("prettier-plugin-svelte"),
     require.resolve("prettier-plugin-astro"),
-    require("prettier-plugin-tailwindcss"),
+    "prettier-plugin-tailwindcss",
   ],
   overrides: [
     {

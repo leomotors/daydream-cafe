@@ -142,5 +142,7 @@ export const projects = {
       img: "https://avatars.githubusercontent.com/u/104977669?s=200&v=4",
     },
     // TODO RPKM Users 40k
+    // TODO CU Get Reg
+    // TODO Split category
   ],
 } satisfies Record<string, IProject[]>;

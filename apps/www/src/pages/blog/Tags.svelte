@@ -7,7 +7,7 @@
   <p class={clsx}>
     <span class="font-bold">Tags</span>
     {#each tags as tag}
-      <span class="rounded-lg bg-gray-500 p-1 mx-1">{tag}</span>
+      <span class="mx-1 rounded-lg bg-gray-500 p-1">{tag}</span>
     {/each}
   </p>
 {/if}

@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
+
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 

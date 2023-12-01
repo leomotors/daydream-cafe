@@ -1,12 +1,10 @@
 <script lang="ts">
   import { Links } from "@daydream-cafe/constants";
-  import Award from "svelte-bootstrap-icons/lib/Award.svelte";
   import Briefcase from "svelte-bootstrap-icons/lib/Briefcase.svelte";
   import CodeSquare from "svelte-bootstrap-icons/lib/CodeSquare.svelte";
   import GitHub from "svelte-bootstrap-icons/lib/Github.svelte";
   import JournalRichtext from "svelte-bootstrap-icons/lib/JournalRichtext.svelte";
   import Linkedin from "svelte-bootstrap-icons/lib/Linkedin.svelte";
-  import Twitter from "svelte-bootstrap-icons/lib/Twitter.svelte";
 
   import { CgWebring, LinkButton } from "../components";
 </script>
@@ -16,10 +14,6 @@
   <h2 class="text-2xl font-bold sm:text-3xl">Nutthapat Pongtanyavichai</h2>
 
   <section class="my-2">
-    <LinkButton name="Portfolio" to={Links.portfolio}>
-      <Award width="32" height="32" />
-    </LinkButton>
-
     <LinkButton name="Resume" to={Links.resume}>
       <Briefcase width="32" height="32" />
     </LinkButton>
@@ -36,10 +30,6 @@
   <section class="my-2">
     <LinkButton name="GitHub" to={Links.github}>
       <GitHub width="32" height="32" />
-    </LinkButton>
-
-    <LinkButton name="Twitter" to={Links.twitter}>
-      <Twitter width="32" height="32" />
     </LinkButton>
 
     <LinkButton name="LinkedIn" to={Links.linkedin}>

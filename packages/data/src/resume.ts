@@ -3,11 +3,8 @@ import { Links } from "@daydream-cafe/constants";
 import { activities } from "./activities.js";
 import { ossContrib as _ossContrib } from "./osscontrib.js";
 import { projects as _projects } from "./projects.js";
-import { skills } from "./skills.js";
 
-const { proglang } = skills;
-
-export const fullVersionLink = "https://resume.leomotors.net";
+export const fullVersionLink = "https://resume.leomotors.me";
 export const sourceLink = "https://github.com/Leomotors/daydream-cafe";
 
 export const introData = {
@@ -21,27 +18,8 @@ export const introData = {
 
 export const technologies = [
   {
-    section: "Languages:",
-    details: proglang.map((o) => o.name).join(", "),
-  },
-  {
-    section: "Preferred Stuff:",
-    details: "TypeScript, TailwindCSS, SvelteKit, Nextjs",
-  },
-  {
-    section: "Library/Framework:",
-    details:
-      "React, Next, Vue, Svelte/Kit, Bootstrap, TailwindCSS, GraphQL, Nest, Prisma, Mocha, Jest, Vitest, discord.js, UWP+WinUI (C++/C#), Flutter, OpenCV, CMake",
-  },
-  {
-    section: "Tools (misc):",
-    details:
-      "Git, GitHub, VSCode, Visual Studio, zsh, Powershell, ssh, Markdown, LaTeX, Raspberry Pi, PostgreSQL, Turborepo, Figma (View), Storybook, Docker, Docker Compose",
-  },
-  {
-    section: "IaaS, PaaS:",
-    details:
-      "Vercel, Netlify, GitHub Pages, Github Actions, Firebase (Firestore & Realtime Database), DigitalOcean (Droplet), Microsoft Azure",
+    section: "Preferred Stack:",
+    details: "TypeScript, TailwindCSS, SvelteKit, React, Next.js",
   },
 ];
 
@@ -64,18 +42,12 @@ export const workExperiences = [
   {
     position: "Software Engineer (Frontend, Part Time)",
     company: "Brikl",
-    url: "https://www.brikl.com/jobs",
-    years: "September 2022 - Present",
+    url: "https://www.brikl.com",
+    years: "September 2022 - September 2023",
     details: [
       "Fixing bugs and implement new feature for storefront",
       "Maintain frontend codebase, improve code quality and DX",
     ],
-  },
-  {
-    position: "Full Stack Developer (Part Time)",
-    company: "Monkey Everyday",
-    url: "https://monkeyeveryday.com/",
-    years: "August 2022 - August 2022",
   },
   {
     position: "Full Stack Developer (Internship)",

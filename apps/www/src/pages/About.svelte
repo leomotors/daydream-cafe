@@ -27,7 +27,7 @@
       <ul class="my-2">
         <li>
           <p>🎂</p>
-          <p>18 Years Old</p>
+          <p>19 Years Old</p>
         </li>
         <li>
           <p>🏫</p>
@@ -36,15 +36,12 @@
           </p>
         </li>
         <li>
-          <p>🏢</p>
-          <p>
-            Platform Engineer at
-            <ExtLink href="https://brikl.com/jobs">Brikl</ExtLink>
-          </p>
+          <p>💡</p>
+          <p>Thinc. Core Team</p>
         </li>
         <li>
-          <p>🥈</p>
-          <p>Computer Olympic Student</p>
+          <p>🏢</p>
+          <p>Ex Platform Engineer at Brikl</p>
         </li>
       </ul>
 
