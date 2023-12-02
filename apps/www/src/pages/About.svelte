@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Links } from "@daydream-cafe/constants";
-  import Award from "svelte-bootstrap-icons/lib/Award.svelte";
   import Briefcase from "svelte-bootstrap-icons/lib/Briefcase.svelte";
 
   import { ExtLink, Image, LinkButton } from "../components";
@@ -47,10 +46,6 @@
 
       <p class="text-xl font-bold">More Info on</p>
       <section class="my-2 flex justify-start gap-2">
-        <LinkButton name="Portfolio" to={Links.portfolio} size="sm">
-          <Award width="20" height="20" />
-        </LinkButton>
-
         <LinkButton name="Public Resume" to={Links.resume} size="sm">
           <Briefcase width="20" height="20" />
         </LinkButton>

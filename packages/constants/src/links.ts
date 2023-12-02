@@ -1,8 +1,6 @@
 export const www = "https://leomotors.me";
-export const portfolio = "https://portfolio.leomotors.me";
 export const resume = "https://resume.leomotors.me";
 
-export const blog = "https://blog.leomotors.me";
 export const repos = "https://repos.leomotors.me";
 
 export const github = "https://github.com/Leomotors";
