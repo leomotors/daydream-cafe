@@ -1,24 +1,27 @@
-export interface IOSSContrib {
-  title: string;
-  link: string;
-  desc: string;
-  resume_desc?: string;
-  language?: string;
-  img: string;
-  bgtl?: boolean;
+export interface OSSContrib {
+  name: string;
+  description: string;
+  contributions: string[];
 }
 
-export const ossContrib: IOSSContrib[] = [
+export const ossContribs = [
   {
-    title: "CU Get Reg",
-    link: "https://github.com/thinc-org/cugetreg",
-    desc: "An app to help plan enrolling courses in Chulalongkorn University. Used by most of Chulalongkorn Students because it is very useful app.",
-    img: "https://user-images.githubusercontent.com/33742791/142388797-fa14bcfa-b01e-45ab-a271-bfdeeb26285f.png",
+    name: "@trivago/prettier-plugin-sort-imports",
+    description: "Prettier plugin for sorting imports",
+    contributions: [
+      "Add type definitions that can be imported to make type-safe prettier config",
+    ],
   },
   {
-    title: "@trivago/prettier-plugin-sort-imports",
-    link: "https://github.com/trivago/prettier-plugin-sort-imports",
-    desc: "Contribute to prettier plugin for sorting imports.",
-    img: "",
+    name: "PED 4 YOU",
+    description: "A website simulating election, especially for new voters",
+    contributions: [
+      "Format Code and add minor features (according to open issues)",
+    ],
   },
-];
+  {
+    name: "tldr.sh",
+    description: "Collaborative cheatsheets for console commands",
+    contributions: ["Small Thai Translation"],
+  },
+] satisfies OSSContrib[];

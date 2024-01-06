@@ -1,11 +1,10 @@
-export { activities } from "./activities.js";
-export type { IActivity } from "./activities.js";
+// Sections
 
-export { certificates } from "./certificates.js";
-export type { ICertificate } from "./certificates.js";
-
-export { ossContrib } from "./osscontrib.js";
-export type { IOSSContrib } from "./osscontrib.js";
-
-export { projects } from "./projects.js";
-export type { IProject } from "./projects.js";
+// 1. Education
+// 2. Jobs Experience
+// 3. Volunteer Experience (Club Member, etc.)
+// 4. OSS Contributions
+// 5. Base Skills
+// 6. Side Projects
+// 7. Activities and Awards
+// 8. Certificates
