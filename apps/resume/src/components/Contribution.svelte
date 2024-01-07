@@ -2,14 +2,8 @@
   import HideToggle from "$components/HideToggle.svelte";
   import type { Contribution } from "@daydream-cafe/data";
 
-  export let title: string;
   export let data: Contribution[];
-  export let h2clsx: string;
 </script>
-
-<HideToggle />
-<h2 class={h2clsx}>{title}</h2>
-<hr />
 
 <ul class="list-disc pl-8 text-left">
   {#each data as d}
@@ -29,10 +23,3 @@
     </li>
   {/each}
 </ul>
-
-<style lang="postcss">
-  hr {
-    @apply mb-2 mt-0;
-    border-color: darkgrey;
-  }
-</style>

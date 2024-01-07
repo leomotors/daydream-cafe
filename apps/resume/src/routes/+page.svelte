@@ -32,7 +32,7 @@
     editMode = !editMode;
   }
 
-  const h2clsx = "text-left text-2xl uppercase print:text-4xl";
+  const h2clsx = "text-left text-2xl uppercase print:text-4xl font-semibold";
 </script>
 
 <header
@@ -74,6 +74,8 @@
 >
   <Intro {...introData} />
 
+  <!-- Section List: packages/data/src/index.ts -->
+
   <!-- Section 1 -->
   <section>
     <HideToggle />
@@ -103,18 +105,23 @@
 
   <!-- Section 3 -->
   <section>
-    <Contribution title="Volunteer Experience" data={volunteers} {h2clsx} />
+    <HideToggle />
+    <h2 class={h2clsx}>Volunteer Experience</h2>
+    <hr />
+
+    <Contribution data={volunteers} />
   </section>
 
   <!-- Section 4 -->
   <section>
-    <Contribution
-      title="Open Source Contribution"
-      data={ossContribs}
-      {h2clsx}
-    />
+    <HideToggle />
+    <h2 class={h2clsx}>Open Source Contribution</h2>
+    <hr />
+
+    <Contribution data={ossContribs} />
   </section>
 
+  <!-- Section 5 -->
   <section>
     <HideToggle />
     <h2 class={h2clsx}>Base Skills</h2>
@@ -130,21 +137,36 @@
     </ul>
   </section>
 
-  <!-- <section>
+  <!-- Section 6 -->
+  <section>
     <HideToggle />
-    <h2 class={h2clsx}>Awards & Activities</h2>
+    <h2 class={h2clsx}>Side Projects</h2>
     <hr />
 
     <ul>
-      {#each awards as award}
+      {#each sideProjects as project}
+        <Project data={project} />
+      {/each}
+    </ul>
+  </section>
+
+  <!-- Section 7 -->
+  <section>
+    <HideToggle />
+    <h2 class={h2clsx}>Activities & Awards</h2>
+    <hr />
+
+    <ul>
+      {#each activities as activity}
         <li>
           <HideToggle />
-          <strong>{award.name}</strong>, {award.details}
+          <strong>{activity.name}</strong>, {activity.description}
         </li>
       {/each}
     </ul>
-  </section> -->
+  </section>
 
+  <!-- Section 8 -->
   <section>
     <HideToggle />
     <h2 class={h2clsx}>Certificates</h2>
@@ -156,45 +178,6 @@
       {/each}
     </div>
   </section>
-
-  <!-- <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Open Source Contribution</h2>
-    <hr />
-
-    <ul>
-      {#each ossContrib as project}
-        <Project {project} />
-      {/each}
-    </ul>
-  </section>
-
-  <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Projects</h2>
-    <hr />
-
-    <ul>
-      {#each projects as project}
-        <Project {project} />
-      {/each}
-    </ul>
-  </section>
-
-  <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Interests</h2>
-    <hr />
-
-    <ul>
-      {#each interests as interest}
-        <li>
-          <HideToggle />
-          {interest}
-        </li>
-      {/each}
-    </ul>
-  </section> -->
 
   <footer class="print-only">
     (See in <a href={fullVersionLink} target="_blank" rel="noreferrer">web</a>

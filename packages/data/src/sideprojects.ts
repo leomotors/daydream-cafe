@@ -10,6 +10,7 @@ export const sideProjects = [
     name: "Raspberry Pi 5 Home Server",
     description:
       "A single board computer that runs all my service using Docker with my custom GitOps to make versioning of each service",
+    url: "https://leomotors.me/blog/honamipi5",
     technologies: ["Ubuntu", "Docker", "Cloudflare Tunnel"],
   },
   {
