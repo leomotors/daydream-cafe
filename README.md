@@ -1,25 +1,24 @@
 # Daydream Cafe
 
 Codes for my websites \*.leomotors.me  
-Codes are moved from [Leomotors/Leomotors](https://github.com/Leomotors/Leomotors)
+Codes are moved from [leomotors/leomotors](https://github.com/leomotors/leomotors)
 
 _yes, nothing related to Daydream cafe_
 
 ## Apps
 
 - www -> https://leomotors.me
-- resume -> https://resume.leomotors.me
+- resume -> https://resume.leomotors.me (Based on [narze/resume](https://github.com/narze/resume))
 
 ## Packages
 
 - config
 - constants
 - data -> for shared data between resume and portfolio (coming soon?)
-- posts -> for blog posts in https://leomotors.me
 
 ## Tech Stack
 
-- Tools: TypeScript, Turborepo with Remote Caching at Vercel, ESLint, Prettier, Vite
+- Tools: TypeScript, Turborepo, ESLint, Prettier, Vite
 - Framework: ~~Solid Start~~ SvelteKit
 - Libraries: TailwindCSS SCSS
 

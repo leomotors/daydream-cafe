@@ -1,6 +1,4 @@
 <script lang="ts">
-  import HideToggle from "$components/HideToggle.svelte";
-
   import type { Experience } from "@daydream-cafe/data";
 
   export let data: Experience;
@@ -8,7 +6,6 @@
 </script>
 
 <div class="work-experience">
-  <HideToggle />
   <div class="mb-2 flex justify-start gap-4 font-bold print:mb-1">
     <p>{company}</p>
     <p>{duration}</p>

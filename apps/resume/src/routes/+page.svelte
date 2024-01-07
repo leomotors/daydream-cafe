@@ -22,15 +22,10 @@
 
   import Certificate from "$components/Certificate.svelte";
   import Contribution from "$components/Contribution.svelte";
-  import HideToggle from "$components/HideToggle.svelte";
   import Intro from "$components/Intro.svelte";
   import Project from "$components/Project.svelte";
   import Work from "$components/Work.svelte";
-
-  let editMode = false;
-  function toggleMode() {
-    editMode = !editMode;
-  }
+  import Hideable from "$/components/Hideable.svelte";
 
   const h2clsx = "text-left text-2xl uppercase print:text-4xl font-semibold";
 </script>
@@ -40,9 +35,6 @@
 >
   <h1 class="text-4xl">Resumette</h1>
   <h3>
-    <button on:click={toggleMode} class="text-lg underline">
-      {editMode ? "[View]" : "[Edit]"}
-    </button>
     <button on:click={() => window.print()} class="text-lg underline">
       [Print]
     </button>
@@ -53,11 +45,19 @@
     <code>web-only</code> CSS class will be hidden on print.
   </p>
   <p>
-    You can toggle
-    <button on:click={toggleMode} class="underline"> [Edit Mode] </button>
-    to hide some sections before printing.
+    You can click at any sections or lines hide some information before
+    printing.
   </p>
-  (<a href={sourceLink} target="_blank" rel="noreferrer">Source</a>)
+
+  <p>
+    [<a href={sourceLink} target="_blank" rel="noreferrer">Source</a>] [<a
+      href="https://github.com/leomotors/daydream-cafe/blob/main/packages/data/src/index.ts"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Data</a
+    >]
+  </p>
 
   <p>
     See all my other websites at
@@ -67,116 +67,127 @@
   </p>
 </header>
 
-<main
-  class="m-0 max-w-screen-xl p-4 text-center md:m-8 xl:mx-auto {editMode
-    ? 'edit-mode'
-    : 'display-mode'}"
->
+<main class="m-0 max-w-screen-xl p-4 text-center md:m-8 xl:mx-auto">
   <Intro {...introData} />
 
   <!-- Section List: packages/data/src/index.ts -->
 
   <!-- Section 1 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Education</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Education</h2>
+      <hr />
 
-    <ul>
-      {#each educations as edu}
-        <li>
-          <HideToggle />
-          <strong>{edu.name}</strong>, {edu.program}, {edu.year} (GPAX {edu.gpax})
-        </li>
-      {/each}
-    </ul>
+      <ul>
+        {#each educations as edu}
+          <Hideable>
+            <li>
+              <strong>{edu.name}</strong>, {edu.program}, {edu.year} (GPAX {edu.gpax})
+            </li>
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
   </section>
 
   <!-- Section 2 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Work Experience</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Work Experience</h2>
+      <hr />
 
-    {#each experiences as experience}
-      <Work data={experience} />
-    {/each}
+      {#each experiences as experience}
+        <Hideable>
+          <Work data={experience} />
+        </Hideable>
+      {/each}
+    </Hideable>
   </section>
 
   <!-- Section 3 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Volunteer Experience</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Volunteer Experience</h2>
+      <hr />
 
-    <Contribution data={volunteers} />
+      <Contribution data={volunteers} />
+    </Hideable>
   </section>
 
   <!-- Section 4 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Open Source Contribution</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Open Source Contribution</h2>
+      <hr />
 
-    <Contribution data={ossContribs} />
+      <Contribution data={ossContribs} />
+    </Hideable>
   </section>
 
   <!-- Section 5 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Base Skills</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Base Skills</h2>
+      <hr />
 
-    <ul>
-      {#each baseSkills as skill}
-        <li>
-          <HideToggle />
-          {skill}
-        </li>
-      {/each}
-    </ul>
+      <ul>
+        {#each baseSkills as skill}
+          <Hideable>
+            <li>{skill}</li>
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
   </section>
 
   <!-- Section 6 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Side Projects</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Side Projects</h2>
+      <hr />
 
-    <ul>
-      {#each sideProjects as project}
-        <Project data={project} />
-      {/each}
-    </ul>
+      <ul>
+        {#each sideProjects as project}
+          <Hideable>
+            <Project data={project} />
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
   </section>
 
   <!-- Section 7 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Activities & Awards</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Activities & Awards</h2>
+      <hr />
 
-    <ul>
-      {#each activities as activity}
-        <li>
-          <HideToggle />
-          <strong>{activity.name}</strong>, {activity.description}
-        </li>
-      {/each}
-    </ul>
+      <ul>
+        {#each activities as activity}
+          <Hideable>
+            <li>
+              <strong>{activity.name}</strong>, {activity.description}
+            </li>
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
   </section>
 
   <!-- Section 8 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Certificates</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Certificates</h2>
+      <hr />
 
-    <div class="flex">
-      {#each certificates as certificate}
-        <Certificate {...certificate} />
-      {/each}
-    </div>
+      <div class="flex">
+        {#each certificates as certificate}
+          <Hideable>
+            <Certificate {...certificate} />
+          </Hideable>
+        {/each}
+      </div>
+    </Hideable>
   </section>
 
   <footer class="print-only">
@@ -208,15 +219,11 @@
     border-color: darkgrey;
   }
 
-  section > ul {
+  section ul {
     @apply list-disc pl-8 text-left;
   }
 
   :global(.print-only) {
-    display: none;
-  }
-
-  :global(main.display-mode .hide-toggle) {
     display: none;
   }
 

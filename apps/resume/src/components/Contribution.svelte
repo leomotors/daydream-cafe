@@ -1,5 +1,4 @@
 <script lang="ts">
-  import HideToggle from "$components/HideToggle.svelte";
   import type { Contribution } from "@daydream-cafe/data";
 
   export let data: Contribution[];
@@ -8,7 +7,6 @@
 <ul class="list-disc pl-8 text-left">
   {#each data as d}
     <li>
-      <HideToggle />
       <p>
         <strong>{d.name}</strong> - {d.description}
       </p>

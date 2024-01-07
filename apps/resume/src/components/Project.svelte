@@ -1,6 +1,4 @@
 <script lang="ts">
-  import HideToggle from "$components/HideToggle.svelte";
-
   import type { SideProject } from "@daydream-cafe/data";
 
   export let data: SideProject;
@@ -8,7 +6,6 @@
 </script>
 
 <li>
-  <HideToggle />
   <p>
     <strong>{name}</strong> - {description}
 
