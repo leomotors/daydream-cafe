@@ -1,33 +1,31 @@
 <script lang="ts">
   import "../app.css";
 
-  import { certificates } from "@daydream-cafe/data";
+  // Resume Content
   import {
-    awards,
+    activities,
+    baseSkills,
+    certificates,
     educations,
+    experiences,
     fullVersionLink,
-    interests,
-    ossContrib,
-    projects,
+    ossContribs,
+    sideProjects,
     sourceLink,
-    technologies,
-    workExperiences,
-  } from "@daydream-cafe/data/resume";
+    volunteers,
+  } from "@daydream-cafe/data";
 
+  // Intro Data
   import { introData } from "../data";
 
+  import Hideable from "$/components/Hideable.svelte";
   import Certificate from "$components/Certificate.svelte";
-  import HideToggle from "$components/HideToggle.svelte";
+  import Contribution from "$components/Contribution.svelte";
   import Intro from "$components/Intro.svelte";
   import Project from "$components/Project.svelte";
   import Work from "$components/Work.svelte";
 
-  let editMode = false;
-  function toggleMode() {
-    editMode = !editMode;
-  }
-
-  const h2clsx = "text-left text-2xl uppercase print:text-4xl";
+  const h2clsx = "text-left text-2xl uppercase print:text-4xl font-semibold";
 </script>
 
 <header
@@ -35,9 +33,6 @@
 >
   <h1 class="text-4xl">Resumette</h1>
   <h3>
-    <button on:click={toggleMode} class="text-lg underline">
-      {editMode ? "[View]" : "[Edit]"}
-    </button>
     <button on:click={() => window.print()} class="text-lg underline">
       [Print]
     </button>
@@ -48,11 +43,19 @@
     <code>web-only</code> CSS class will be hidden on print.
   </p>
   <p>
-    You can toggle
-    <button on:click={toggleMode} class="underline"> [Edit Mode] </button>
-    to hide some sections before printing.
+    You can click at any sections or lines hide some information before
+    printing.
   </p>
-  (<a href={sourceLink} target="_blank" rel="noreferrer">Source</a>)
+
+  <p>
+    [<a href={sourceLink} target="_blank" rel="noreferrer">Source</a>] [<a
+      href="https://github.com/leomotors/daydream-cafe/blob/main/packages/data/src/index.ts"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Data</a
+    >]
+  </p>
 
   <p>
     See all my other websites at
@@ -62,120 +65,127 @@
   </p>
 </header>
 
-<main
-  class="m-0 max-w-screen-xl p-4 text-center md:m-8 xl:mx-auto {editMode
-    ? 'edit-mode'
-    : 'display-mode'}"
->
+<main class="m-0 max-w-screen-xl p-4 text-center md:m-8 xl:mx-auto">
   <Intro {...introData} />
 
-  <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Technologies and Languages</h2>
-    <hr />
+  <!-- Section List: packages/data/src/index.ts -->
 
-    <table class="table table-fixed items-start text-left">
-      {#each technologies as tech}
-        <tr>
-          <HideToggle />
-          <td class="w-[11rem] pl-4 align-top print:w-36">
-            <span class="w-36 print:w-32">- {tech.section}</span>
-          </td>
-          <td><span>{tech.details}</span></td>
-        </tr>
-      {/each}
-    </table>
+  <!-- Section 1 -->
+  <section>
+    <Hideable>
+      <h2 class={h2clsx}>Education</h2>
+      <hr />
+
+      <ul>
+        {#each educations as edu}
+          <Hideable>
+            <li>
+              <strong>{edu.name}</strong>, {edu.program}, {edu.year} (GPAX {edu.gpax})
+            </li>
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
   </section>
 
+  <!-- Section 2 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Education</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Work Experience</h2>
+      <hr />
 
-    <ul>
-      {#each educations as edu}
-        <li>
-          <HideToggle />
-          <strong>{edu.head}</strong>, {edu.details}
-        </li>
+      {#each experiences as experience}
+        <Hideable>
+          <Work data={experience} />
+        </Hideable>
       {/each}
-    </ul>
+    </Hideable>
   </section>
 
+  <!-- Section 3 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Awards & Activities</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Volunteer Experience</h2>
+      <hr />
 
-    <ul>
-      {#each awards as award}
-        <li>
-          <HideToggle />
-          <strong>{award.name}</strong>, {award.details}
-        </li>
-      {/each}
-    </ul>
+      <Contribution data={volunteers} />
+    </Hideable>
   </section>
 
+  <!-- Section 4 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Certificates</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Open Source Contribution</h2>
+      <hr />
 
-    <div class="flex">
-      {#each certificates as certificate}
-        <Certificate {...certificate} />
-      {/each}
-    </div>
+      <Contribution data={ossContribs} />
+    </Hideable>
   </section>
 
+  <!-- Section 5 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Work Experience</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Base Skills</h2>
+      <hr />
 
-    {#each workExperiences as exp}
-      <Work {...exp} />
-    {/each}
+      <ul>
+        {#each baseSkills as skill}
+          <Hideable>
+            <li>{skill}</li>
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
   </section>
 
+  <!-- Section 6 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Open Source Contribution</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Side Projects</h2>
+      <hr />
 
-    <ul>
-      {#each ossContrib as project}
-        <Project {project} />
-      {/each}
-    </ul>
+      <ul>
+        {#each sideProjects as project}
+          <Hideable hide={!!project.hide}>
+            <Project data={project} />
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
   </section>
 
+  <!-- Section 7 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Projects</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Activities & Awards</h2>
+      <hr />
 
-    <ul>
-      {#each projects as project}
-        <Project {project} />
-      {/each}
-    </ul>
+      <ul>
+        {#each activities as activity}
+          <Hideable>
+            <li>
+              <strong>{activity.name}</strong>, {activity.description}
+            </li>
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
   </section>
 
+  <!-- Section 8 -->
   <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Interests</h2>
-    <hr />
+    <Hideable>
+      <h2 class={h2clsx}>Certificates</h2>
+      <hr />
 
-    <ul>
-      {#each interests as interest}
-        <li>
-          <HideToggle />
-          {interest}
-        </li>
-      {/each}
-    </ul>
+      <div class="flex">
+        {#each certificates as certificate}
+          <Hideable>
+            <Certificate {...certificate} />
+          </Hideable>
+        {/each}
+      </div>
+    </Hideable>
   </section>
 
   <footer class="print-only">
@@ -207,15 +217,11 @@
     border-color: darkgrey;
   }
 
-  section > ul {
+  section ul {
     @apply list-disc pl-8 text-left;
   }
 
   :global(.print-only) {
-    display: none;
-  }
-
-  :global(main.display-mode .hide-toggle) {
     display: none;
   }
 

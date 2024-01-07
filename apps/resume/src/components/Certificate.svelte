@@ -1,16 +1,12 @@
 <script lang="ts">
-  import type { ICertificate } from "@daydream-cafe/data";
+  import type { Certificate } from "@daydream-cafe/data";
 
-  import HideToggle from "$components/HideToggle.svelte";
-
-  export let name: ICertificate["name"];
-  export let image: ICertificate["image"];
-  export let link: ICertificate["link"];
+  export let name: Certificate["name"];
+  export let image: Certificate["image"];
+  export let link: Certificate["link"];
 </script>
 
 <div class="certificate-card" title={name}>
-  <HideToggle />
-
   <a href={link} target="_blank" rel="noreferrer">
     <img src={image} alt="Image for {name}" class="h-[100px] print:h-[70px]" />
   </a>

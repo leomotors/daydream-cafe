@@ -1,4 +1,4 @@
-import { introData as baseIntroData } from "@daydream-cafe/data/resume";
+import { introData as baseIntroData } from "@daydream-cafe/data";
 
 import { dev } from "$app/environment";
 import { env } from "$env/dynamic/public";

@@ -9,8 +9,8 @@ const config = {
   semi: true,
   printWidth: 80,
   plugins: [
-    require("prettier-plugin-svelte"),
-    require.resolve("prettier-plugin-astro"),
+    "prettier-plugin-svelte",
+    "prettier-plugin-astro",
     "prettier-plugin-tailwindcss",
   ],
   overrides: [

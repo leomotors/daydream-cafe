@@ -1,4 +1,4 @@
-export interface ICertificate {
+export interface Certificate {
   name: string;
   image: string;
   link: string;
@@ -17,4 +17,4 @@ export const certificates = [
       "https://images.credly.com/size/340x340/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png",
     link: "https://www.credly.com/badges/6000d87a-1061-4a6c-b3f3-73e5ebe19c5e",
   },
-] satisfies ICertificate[];
+] satisfies Certificate[];

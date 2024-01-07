@@ -1,27 +1,30 @@
 <script lang="ts">
-  import HideToggle from "$components/HideToggle.svelte";
+  import type { Experience } from "@daydream-cafe/data";
 
-  export let position = "";
-  export let company = "";
-  export let url = "";
-  export let years = "";
-  export let details: string[] = [];
+  export let data: Experience;
+  $: ({ company, duration, positions } = data);
 </script>
 
 <div class="work-experience">
-  <HideToggle />
-  <div class="mb-2 flex font-bold print:mb-1">
-    <div class="flex-1 text-left">{position}</div>
-    <div class="flex-0">
-      <a href={url} target="_blank" rel="noreferrer">{company}</a>
-    </div>
-    <div class="flex-1 text-right">{years}</div>
+  <div class="mb-2 flex justify-start gap-4 font-bold print:mb-1">
+    <p>{company}</p>
+    <p>{duration}</p>
   </div>
   <ul class="list-disc pl-8 text-left print:pl-6">
-    {#each details as detail}
+    {#each positions as position}
       <li>
-        <HideToggle />
-        {detail}
+        <p>
+          <strong>{position.name}</strong>
+          <span>{position.period}</span>
+        </p>
+
+        <p>Technologies: {position.technologies.join(", ")}</p>
+
+        <ul class="list-disc pl-8 print:pl-6">
+          {#each position.jobs as job}
+            <li>{job}</li>
+          {/each}
+        </ul>
       </li>
     {/each}
   </ul>
@@ -30,10 +33,6 @@
 <style lang="postcss">
   .work-experience {
     @apply my-4;
-  }
-
-  a {
-    text-decoration: underline;
   }
 
   @media print {
