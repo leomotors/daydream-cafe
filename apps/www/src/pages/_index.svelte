@@ -20,9 +20,7 @@
     <LinkButton name="Repo List" to={Links.repos}>
       <CodeSquare width="32" height="32" />
     </LinkButton>
-  </section>
 
-  <section class="my-2">
     <LinkButton name="GitHub" to={Links.github}>
       <GitHub width="32" height="32" />
     </LinkButton>
