@@ -3,6 +3,8 @@ export interface SideProject {
   description: string;
   url?: string;
   technologies: string[];
+  // Default Hide Options
+  hide?: "risky" | "old";
 }
 
 export const sideProjects = [
@@ -50,6 +52,7 @@ export const sideProjects = [
     name: "Adobe Renew",
     description: "Redacted",
     technologies: ["Playwright Automation"],
+    hide: "risky",
   },
   {
     name: "CP Checklist",
@@ -89,12 +92,14 @@ export const sideProjects = [
       "Prisma",
       "PostgreSQL",
     ],
+    hide: "risky",
   },
   {
     name: "Long Live HM",
     description: "Chrome Extension สำหรับคนรักชาติ",
     url: "https://github.com/leomotors/long-live-hm",
     technologies: ["Chrome Extension"],
+    hide: "risky",
   },
   {
     name: "Food Busters",

@@ -19,7 +19,7 @@ _yes, nothing related to Daydream cafe_
 ## Tech Stack
 
 - Tools: TypeScript, Turborepo, ESLint, Prettier, Vite
-- Framework: ~~Solid Start~~ SvelteKit
+- Framework: SvelteKit
 - Libraries: TailwindCSS SCSS
 
 ![](https://media.tenor.com/Opn-i9gh6fsAAAAC/%E3%81%93%E3%81%93%E3%81%82-%E3%81%94%E3%81%A1%E3%81%86%E3%81%95.gif)

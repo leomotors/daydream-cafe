@@ -148,7 +148,7 @@
 
       <ul>
         {#each sideProjects as project}
-          <Hideable>
+          <Hideable hide={!!project.hide}>
             <Project data={project} />
           </Hideable>
         {/each}
