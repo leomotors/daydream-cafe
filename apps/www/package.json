@@ -9,8 +9,8 @@
     "build": "astro build",
     "preview": "astro preview --port 4910",
     "astro": "astro",
-    "lint": "eslint src && prettier --check \"src/**/*.{css,scss,md}\"",
-    "format": "eslint src --fix && prettier --write \"src/**/*.{css,scss,md}\""
+    "lint": "prettier --check \"src/**/*.{css,scss,md}\" && eslint src",
+    "format": "prettier --write \"src/**/*.{css,scss,md}\" && eslint src --fix"
   },
   "dependencies": {
     "@astrojs/mdx": "2.0.3",

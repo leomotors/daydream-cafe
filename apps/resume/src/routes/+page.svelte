@@ -1,31 +1,29 @@
 <script lang="ts">
   import "../app.css";
 
+  // Resume Content
+  import {
+    activities,
+    baseSkills,
+    certificates,
+    educations,
+    experiences,
+    fullVersionLink,
+    ossContribs,
+    sideProjects,
+    sourceLink,
+    volunteers,
+  } from "@daydream-cafe/data";
+
   // Intro Data
   import { introData } from "../data";
 
-  import {
-    // Intro Data
-    sourceLink,
-    fullVersionLink,
-
-    // Resume Content
-    educations,
-    experiences,
-    volunteers,
-    ossContribs,
-    baseSkills,
-    sideProjects,
-    activities,
-    certificates,
-  } from "@daydream-cafe/data";
-
+  import Hideable from "$/components/Hideable.svelte";
   import Certificate from "$components/Certificate.svelte";
   import Contribution from "$components/Contribution.svelte";
   import Intro from "$components/Intro.svelte";
   import Project from "$components/Project.svelte";
   import Work from "$components/Work.svelte";
-  import Hideable from "$/components/Hideable.svelte";
 
   const h2clsx = "text-left text-2xl uppercase print:text-4xl font-semibold";
 </script>

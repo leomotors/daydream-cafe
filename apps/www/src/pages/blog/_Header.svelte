@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { CollectionEntry } from "astro:content";
-
   import clsx from "clsx/lite";
 
   import PostDate from "./_PostDate.svelte";
