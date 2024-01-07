@@ -13,6 +13,29 @@ export interface Experience {
 
 export const experiences = [
   {
+    company: "Brikl",
+    duration: "1 Year 1 Month",
+    positions: [
+      {
+        name: "Platform Engineer (Frontend, Part Time)",
+        period: "December 2022 - September 2023",
+        jobs: [
+          "Maintain Codebase Quality ex. formatting, unit tests and dependency's vulnerabilities (required for audit) and CI",
+          "Good Codebase Quality and CI Workflows is for good developers' DX",
+        ],
+        technologies: ["Jest", "Renovate"],
+      },
+      {
+        name: "Software Engineer (Frontend, Part Time)",
+        period: "September 2022 - December 2022",
+        jobs: [
+          "Implement features and fix bugs in storefront and admin dashboard",
+        ],
+        technologies: ["TypeScript", "React", "Next.js", "GraphQL", "Gatsby"],
+      },
+    ],
+  },
+  {
     company: "Monkey Everyday",
     duration: "3 Months",
     positions: [
@@ -33,29 +56,6 @@ export const experiences = [
           "NestJS",
           "Prisma",
         ],
-      },
-    ],
-  },
-  {
-    company: "Brikl",
-    duration: "13 Months",
-    positions: [
-      {
-        name: "Software Engineer (Frontend, Part Time)",
-        period: "September 2022 - December 2022",
-        jobs: [
-          "Implement features and fix bugs in storefront and admin dashboard",
-        ],
-        technologies: ["TypeScript", "React", "Next.js", "GraphQL", "Gatsby"],
-      },
-      {
-        name: "Platform Engineer (Frontend, Part Time)",
-        period: "December 2022 - September 2023",
-        jobs: [
-          "Maintain Codebase Quality ex. formatting, unit tests and dependency's vulnerabilities (required for audit) and CI",
-          "Good Codebase Quality and CI Workflows is for good developers' DX",
-        ],
-        technologies: ["Jest", "Renovate"],
       },
     ],
   },

@@ -1,22 +1,27 @@
 <script lang="ts">
   import "../app.css";
 
-  import { certificates } from "@daydream-cafe/data";
-  import {
-    awards,
-    educations,
-    fullVersionLink,
-    interests,
-    ossContrib,
-    projects,
-    sourceLink,
-    technologies,
-    workExperiences,
-  } from "@daydream-cafe/data/resume";
-
+  // Intro Data
   import { introData } from "../data";
 
+  import {
+    // Intro Data
+    sourceLink,
+    fullVersionLink,
+
+    // Resume Content
+    educations,
+    experiences,
+    volunteers,
+    ossContribs,
+    baseSkills,
+    sideProjects,
+    activities,
+    certificates,
+  } from "@daydream-cafe/data";
+
   import Certificate from "$components/Certificate.svelte";
+  import Contribution from "$components/Contribution.svelte";
   import HideToggle from "$components/HideToggle.svelte";
   import Intro from "$components/Intro.svelte";
   import Project from "$components/Project.svelte";
@@ -69,24 +74,7 @@
 >
   <Intro {...introData} />
 
-  <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Technologies and Languages</h2>
-    <hr />
-
-    <table class="table table-fixed items-start text-left">
-      {#each technologies as tech}
-        <tr>
-          <HideToggle />
-          <td class="w-[11rem] pl-4 align-top print:w-36">
-            <span class="w-36 print:w-32">- {tech.section}</span>
-          </td>
-          <td><span>{tech.details}</span></td>
-        </tr>
-      {/each}
-    </table>
-  </section>
-
+  <!-- Section 1 -->
   <section>
     <HideToggle />
     <h2 class={h2clsx}>Education</h2>
@@ -96,13 +84,53 @@
       {#each educations as edu}
         <li>
           <HideToggle />
-          <strong>{edu.head}</strong>, {edu.details}
+          <strong>{edu.name}</strong>, {edu.program}, {edu.year} (GPAX {edu.gpax})
         </li>
       {/each}
     </ul>
   </section>
 
+  <!-- Section 2 -->
   <section>
+    <HideToggle />
+    <h2 class={h2clsx}>Work Experience</h2>
+    <hr />
+
+    {#each experiences as experience}
+      <Work data={experience} />
+    {/each}
+  </section>
+
+  <!-- Section 3 -->
+  <section>
+    <Contribution title="Volunteer Experience" data={volunteers} {h2clsx} />
+  </section>
+
+  <!-- Section 4 -->
+  <section>
+    <Contribution
+      title="Open Source Contribution"
+      data={ossContribs}
+      {h2clsx}
+    />
+  </section>
+
+  <section>
+    <HideToggle />
+    <h2 class={h2clsx}>Base Skills</h2>
+    <hr />
+
+    <ul>
+      {#each baseSkills as skill}
+        <li>
+          <HideToggle />
+          {skill}
+        </li>
+      {/each}
+    </ul>
+  </section>
+
+  <!-- <section>
     <HideToggle />
     <h2 class={h2clsx}>Awards & Activities</h2>
     <hr />
@@ -115,7 +143,7 @@
         </li>
       {/each}
     </ul>
-  </section>
+  </section> -->
 
   <section>
     <HideToggle />
@@ -129,17 +157,7 @@
     </div>
   </section>
 
-  <section>
-    <HideToggle />
-    <h2 class={h2clsx}>Work Experience</h2>
-    <hr />
-
-    {#each workExperiences as exp}
-      <Work {...exp} />
-    {/each}
-  </section>
-
-  <section>
+  <!-- <section>
     <HideToggle />
     <h2 class={h2clsx}>Open Source Contribution</h2>
     <hr />
@@ -176,7 +194,7 @@
         </li>
       {/each}
     </ul>
-  </section>
+  </section> -->
 
   <footer class="print-only">
     (See in <a href={fullVersionLink} target="_blank" rel="noreferrer">web</a>

@@ -1,8 +1,6 @@
-export interface OSSContrib {
-  name: string;
-  description: string;
-  contributions: string[];
-}
+import type { Contribution } from "./common.js";
+
+export type OSSContrib = Contribution;
 
 export const ossContribs = [
   {
