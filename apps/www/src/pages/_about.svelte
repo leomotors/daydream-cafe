@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Links } from "@daydream-cafe/constants";
   import Briefcase from "svelte-bootstrap-icons/lib/Briefcase.svelte";
+  import CodeSquare from "svelte-bootstrap-icons/lib/CodeSquare.svelte";
 
   import { ExtLink, Image, LinkButton } from "../components";
 </script>
@@ -48,6 +49,9 @@
       <section class="my-2 flex justify-start gap-2">
         <LinkButton name="Public Resume" to={Links.resume} size="sm">
           <Briefcase width="20" height="20" />
+        </LinkButton>
+        <LinkButton name="Repo List" to={Links.repos} size="sm">
+          <CodeSquare width="20" height="20" />
         </LinkButton>
       </section>
     </section>

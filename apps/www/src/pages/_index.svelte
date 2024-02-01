@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Links } from "@daydream-cafe/constants";
   import Briefcase from "svelte-bootstrap-icons/lib/Briefcase.svelte";
-  import CodeSquare from "svelte-bootstrap-icons/lib/CodeSquare.svelte";
   import GitHub from "svelte-bootstrap-icons/lib/Github.svelte";
   import Linkedin from "svelte-bootstrap-icons/lib/Linkedin.svelte";
 
@@ -15,10 +14,6 @@
   <section class="my-2">
     <LinkButton name="Resume" to={Links.resume}>
       <Briefcase width="32" height="32" />
-    </LinkButton>
-
-    <LinkButton name="Repo List" to={Links.repos}>
-      <CodeSquare width="32" height="32" />
     </LinkButton>
 
     <LinkButton name="GitHub" to={Links.github}>
