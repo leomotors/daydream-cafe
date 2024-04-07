@@ -2,6 +2,7 @@
 title: Raspberry Pi 5 Home Server Setup
 description: A single board computer that runs all my applications/services using Docker
 tags: [docker, home server]
+updated: 240407
 image: /images/blogs/honamipi5real.webp
 ---
 
@@ -50,4 +51,11 @@ Useful stuff you need to know if you are planning to buy Raspberry Pi 5
   as most PD charger only support up to 3A at 5V but Pi 5 needs 5.1V 5A
 - WLAN Country Config is buggy in Ubuntu Server, avoid connecting to 5GHz network,
   for best network performance, use LAN cable, it is fast, low latency and more reliable
-- Buy Micro HDMI to HDMI cable, you might need it
+- You need to change netplan renderer to `NetworkManager`, See: https://www.cyberciti.biz/faq/change-netplan-renderer-from-networkd-to-networkmanager. Otherwise it might not
+  be able to connect to ethernet even you plugged in the LAN cable.
+- Buy Micro HDMI to HDMI cable, you ~~might~~ _will_ need it
+
+## Common Mistakes
+
+- Be aware of what you plugged in to USB port, your Pi 5 maybe trying to boot
+  from your keyboard 💀
