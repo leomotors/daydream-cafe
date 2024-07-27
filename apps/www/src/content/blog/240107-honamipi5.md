@@ -15,7 +15,7 @@ from Project SEKAI
 
 ## Before using Raspberry Pi
 
-- I used to use Raspberry Pi 3 Model A+ since Q4 2020, it did fine running Discord Bots. Others detail I forgot, its too long.
+- I used to use Raspberry Pi 3 Model A+ since Mid 2021, it did fine running Discord Bots. Others detail I forgot, its too long.
 - Since Mid 2022, I start using Microsoft Azure B2s (2 vCPU, 4GB RAM) as my personal VM for Discord Bots and some web application that need backend. For the price of $12.86/month (Inc. VAT) (fyi: I gave my Pi 3 A+ to my friend)
 - Once my Azure for Students expired (1 Year later), to prevent my bill from skyrocket, I moved to Contabo VPS (4 vCPU, 8GB RAM) for the price of around €8-9/month which later reduced to €4.5/month from Black Friday production
 - After using Contabo for half a year. One day, Contabo physical SSD failed and cause my VM to be down. Being unsatisfied of speed and SLA of Contabo, I decided to buy a Raspberry Pi 5.
