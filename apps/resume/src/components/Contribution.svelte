@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Contribution } from "@daydream-cafe/data";
+
   import Hideable from "./Hideable.svelte";
 
   export let data: Contribution[];
