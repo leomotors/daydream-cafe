@@ -2,7 +2,7 @@
 title: Raspberry Pi 5 Home Server Setup
 description: A single board computer that runs all my applications/services using Docker
 tags: [docker, home server]
-updated: 240727
+updated: 240808
 image: /images/blogs/honamipi5real.webp
 ---
 
@@ -90,8 +90,8 @@ Useful stuff you need to know if you are planning to buy Raspberry Pi 5
 - Raspberry Pi 5 8GB RAM - 3550 THB
 - Raspberry Pi 5 27W PSU - 510 THB
 - SSD M.2 PCIe 4.0 WD BLACK SN770 250GB - 1108 THB (Used Code 9ARM)
-- Argon NEO 5 M.2 NVME PCIE Case - 1555 THB
-- (Cable) Micro-HDMI to HDMI Cable 122 THB
+- Pironman 5 NVMe M.2 SSD PCIe Mini PC Case (Has RGB) - 2918 THB
+- (Cable) HDMI to HDMI Cable - 125 THB
 
 ### Retired Parts
 
@@ -100,10 +100,12 @@ Useful stuff you need to know if you are planning to buy Raspberry Pi 5
 - UGREEN USB 3.0 HDD Enclosure - 390 THB
 - Geekworm X1001 PCIe to M.2 Key-M NVMe SSD - 652 THB
 - Geekworm P579 Metal Case - 399 THB
+- Argon NEO 5 M.2 NVME PCIE Case - 1555 THB
+- (Cable) Micro-HDMI to HDMI Cable - 122 THB
 
-Total Active Parts: 6845 THB  
-Total Retired Parts: 2847 THB  
-Total Money Spent: 9692 THB
+Total Active Parts: 8211 THB  
+Total Retired Parts: 4524 THB  
+Total Money Spent: 12735 THB
 
 Note 1: Cytron has 3% Cashback which is not included here  
 Note 2: LAN Cable, Electric Bill is not included here
@@ -128,8 +130,8 @@ very hot
 
 ### Pi 5 with Argon NEO 5 M.2 NVME PCIE Case
 
-currently
+~~currently~~ no more
 
-### Pironman 5?
+### Pironman 5 NVMe M.2 SSD PCIe Mini PC Case
 
-my money going to gone
+bought will write review soon
