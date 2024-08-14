@@ -13,6 +13,22 @@ export interface Experience {
 
 export const experiences = [
   {
+    company: "Agoda",
+    duration: "10 Weeks",
+    positions: [
+      {
+        name: "Software Engineer Backend",
+        period: "May 2024 - August 2024",
+        jobs: [
+          "Create a POC that related to Site Reliability, consists of sending metrics from application, process and monitor those metrics",
+          "Create service that process Kafka messages and store the result to Microsoft SQL",
+          "Create Grafana Dashboard to visualize those metrics",
+        ],
+        technologies: ["Scala", "Kotlin", "Kafka", "Microsoft SQL", "Grafana"],
+      },
+    ],
+  },
+  {
     company: "Brikl",
     duration: "1 Year 1 Month",
     positions: [
