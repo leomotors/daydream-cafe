@@ -17,7 +17,7 @@ export const experiences = [
     duration: "10 Weeks",
     positions: [
       {
-        name: "Software Engineer Backend",
+        name: "Software Engineer Intern, Backend",
         period: "May 2024 - August 2024",
         jobs: [
           "Create a POC that related to Site Reliability, consists of sending metrics from application, process and monitor those metrics",
@@ -37,7 +37,7 @@ export const experiences = [
         period: "December 2022 - September 2023",
         jobs: [
           "Maintain Codebase Quality ex. formatting, unit tests and dependency's vulnerabilities (required for audit) and CI",
-          "Good Codebase Quality and CI Workflows is for good developers' DX",
+          "Ensure Good Codebase Quality and CI Workflows for developers' DX",
         ],
         technologies: ["Jest", "Renovate"],
       },
