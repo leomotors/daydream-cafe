@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // @ts-check
 
 /** @satisfies {import("tailwindcss").Config} */

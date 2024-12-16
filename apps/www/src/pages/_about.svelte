@@ -27,7 +27,7 @@
       <ul class="my-2">
         <li>
           <p>🎂</p>
-          <p>19 Years Old</p>
+          <p>20 Years Old</p>
         </li>
         <li>
           <p>🏫</p>
