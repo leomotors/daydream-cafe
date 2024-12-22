@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Links } from "@daydream-cafe/constants";
   import Briefcase from "svelte-bootstrap-icons/lib/Briefcase.svelte";
-  import CodeSquare from "svelte-bootstrap-icons/lib/CodeSquare.svelte";
 
   import { ExtLink, Image, LinkButton } from "../components";
 </script>
