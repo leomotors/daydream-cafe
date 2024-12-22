@@ -22,7 +22,7 @@ export const volunteers = [
     description:
       "Community of creators in Thailand, work with open source communities, developers, educators, artists, and more",
     contributions: [
-      "The โง่ Hackathon ครั้งที่ 7 เเห่งประเทศ Thailand (7th Stupid Hackathon in Thailand) - Staff & Website Development",
+      "Staff of many events and Website Development for some of them",
     ],
   },
   {

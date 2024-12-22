@@ -3,6 +3,7 @@
   import Briefcase from "svelte-bootstrap-icons/lib/Briefcase.svelte";
   import GitHub from "svelte-bootstrap-icons/lib/Github.svelte";
   import Linkedin from "svelte-bootstrap-icons/lib/Linkedin.svelte";
+  import Medium from "svelte-bootstrap-icons/lib/Medium.svelte";
 
   import { CgWebring, LinkButton } from "../components";
 </script>
@@ -22,6 +23,10 @@
 
     <LinkButton name="LinkedIn" to={Links.linkedin}>
       <Linkedin width="32" height="32" />
+    </LinkButton>
+
+    <LinkButton name="Medium" to={Links.medium}>
+      <Medium width="32" height="32" />
     </LinkButton>
   </section>
 

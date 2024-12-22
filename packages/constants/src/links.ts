@@ -1,7 +1,8 @@
 export const www = "https://leomotors.me";
 export const resume = "https://resume.leomotors.me";
+export const medium = "https://medium.com/@leomotors";
 
-export const repos = "https://repos.leomotors.me";
+// export const repos = "https://repos.leomotors.me";
 
 export const github = "https://github.com/leomotors";
 export const twitter = "https://twitter.com/LeomotorsTH";

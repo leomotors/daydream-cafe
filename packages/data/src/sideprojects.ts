@@ -9,11 +9,11 @@ export interface SideProject {
 
 export const sideProjects = [
   {
-    name: "Raspberry Pi 5 Home Server",
+    name: "ARM Home Server",
     description:
-      "A single board computer that runs all my service using Docker with my custom GitOps to make versioning of each service",
-    url: "https://leomotors.me/blog/honamipi5",
-    technologies: ["Ubuntu", "Docker", "Cloudflare Tunnel"],
+      "A mini-ITX PC that runs all my service using Docker with my custom GitOps",
+    url: "https://medium.com/@leomotors/building-an-arm-home-server-with-rock-5-itx-f2f7b774ada4",
+    technologies: ["Ubuntu", "Docker", "Cloudflare Tunnel", "mdadm"],
   },
   {
     name: "Golden Frame",
@@ -24,14 +24,14 @@ export const sideProjects = [
   {
     name: "Home Environment Monitoring",
     description:
-      "A system that monitors temperature and humidity in few rooms in my house, a history graph can be viewed easily in Grafana",
+      "A system that monitors temperature and humidity of few rooms in my house, a history graph can be viewed easily in Grafana",
     url: "https://github.com/leomotors/home-env",
     technologies: ["Arduino", "ESP32", "Prometheus", "Golang", "net/http"],
   },
   {
     name: "Waifu Bot",
     description:
-      "Discord bot running in my server, can play music, generate golden frame (using Golden Frame's API) and more *useless* features",
+      "Discord bot that can play music, generate golden frame images and miscellanous features. Also feature website for showing information and for admin to control the bot",
     url: "https://waifu.leomotors.me",
     technologies: [
       "discord.js",
@@ -50,9 +50,8 @@ export const sideProjects = [
   },
   {
     name: "Adobe Renew",
-    description: "Redacted",
+    description: "Playwright Job for doing some routine jobs",
     technologies: ["Playwright Automation"],
-    hide: "risky",
   },
   {
     name: "CP Checklist",
@@ -106,6 +105,7 @@ export const sideProjects = [
     description: "Mobile App prototype for AIS Jump Thailand Hackathon 2021",
     url: "https://github.com/Food-Busters/food_busters",
     technologies: ["Flutter"],
+    hide: "old",
   },
   {
     name: "Rabbit House Menu",
@@ -136,11 +136,13 @@ export const sideProjects = [
       "Simple Arduino Car that can connect to mobile app written in Flutter",
     url: "https://github.com/leomotors/NSM2021-SmartWheelChair-Arduino",
     technologies: ["Arduino", "Flutter"],
+    hide: "old",
   },
   {
     name: "Mini Vector Calculator",
     description: "My first ever project on GitHub, written in Pure C",
     url: "https://github.com/leomotors/Mini-Vector-Calculator",
     technologies: ["C"],
+    hide: "old",
   },
 ] satisfies SideProject[];

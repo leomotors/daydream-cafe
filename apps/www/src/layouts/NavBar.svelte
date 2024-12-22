@@ -1,7 +1,9 @@
 <nav>
   <a href="/">Home</a> |
   <a href="/about">About</a> |
-  <a href="/blog">Blogs</a>
+  <a href="https://medium.com/@leomotors" target="_blank" rel="noreferrer">
+    Blogs
+  </a>
 </nav>
 
 <style lang="scss">

@@ -36,8 +36,8 @@ export const experiences = [
         name: "Platform Engineer (Frontend, Part Time)",
         period: "December 2022 - September 2023",
         jobs: [
-          "Maintain Codebase Quality ex. formatting, unit tests and dependency's vulnerabilities (required for audit) and CI",
-          "Ensure Good Codebase Quality and CI Workflows for developers' DX",
+          "Maintain Codebase Quality ex. formatting, unit tests and dependency's vulnerabilities (required for audit)",
+          "Ensure Good Codebase Quality and CI Workflows to improve developers' DX",
         ],
         technologies: ["Jest", "Renovate"],
       },
@@ -58,10 +58,7 @@ export const experiences = [
       {
         name: "Full Stack Developer (Internship)",
         period: "June 2022 - August 2022",
-        jobs: [
-          "Maintain monkeyeveryday.com and its CMS with Next.js, TailwindCSS and GraphQL",
-          "Maintain Backend using NestJS and Prisma",
-        ],
+        jobs: ["Implement features and fix bugs in its website and its CMS"],
         technologies: [
           "TypeScript",
           "React",

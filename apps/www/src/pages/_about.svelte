@@ -31,9 +31,7 @@
         </li>
         <li>
           <p>🏫</p>
-          <p>
-            Chulalongkorn University &rarr; Computer Engineering CP49 Intania106
-          </p>
+          <p>Computer Engineering Student at Chulalongkorn University</p>
         </li>
         <li>
           <p>💡</p>
@@ -41,17 +39,21 @@
         </li>
         <li>
           <p>🏢</p>
-          <p>Ex Platform Engineer at Brikl</p>
+          <p>
+            Ex Platform Engineer at Brikl and completed Agoda Summer Internship
+            2024
+          </p>
+        </li>
+        <li>
+          <p>🔧</p>
+          <p>Building an ARM Home Server</p>
         </li>
       </ul>
 
-      <p class="text-xl font-bold">More Info on</p>
+      <p class="text-xl font-bold">More about me on</p>
       <section class="my-2 flex justify-start gap-2">
-        <LinkButton name="Public Resume" to={Links.resume} size="sm">
+        <LinkButton name="Resume" to={Links.resume} size="sm">
           <Briefcase width="20" height="20" />
-        </LinkButton>
-        <LinkButton name="Repo List" to={Links.repos} size="sm">
-          <CodeSquare width="20" height="20" />
         </LinkButton>
       </section>
     </section>
