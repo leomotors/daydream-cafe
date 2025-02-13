@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 // @ts-check
 
 /** @satisfies {import("tailwindcss").Config} */
@@ -7,7 +6,6 @@ const config = {
     "./src/**/*.{html,js,svelte,ts,css,scss,astro}",
     "../../packages/posts/dist/*.svelte",
   ],
-  darkMode: "class",
   theme: {
     extend: {
       screens: {
@@ -15,7 +13,6 @@ const config = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
 };
 
-module.exports = config;
+export default config;

@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { Links } from "@daydream-cafe/constants";
   import Briefcase from "svelte-bootstrap-icons/lib/Briefcase.svelte";
+
+  import { Links } from "@daydream-cafe/constants";
 
   import { ExtLink, Image, LinkButton } from "../components";
 </script>
@@ -69,6 +70,8 @@
 </main>
 
 <style lang="scss">
+  @reference "../styles.css"
+
   ul > li {
     @apply flex justify-start gap-2 text-lg sm:text-xl;
   }

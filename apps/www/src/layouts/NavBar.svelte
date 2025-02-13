@@ -7,6 +7,8 @@
 </nav>
 
 <style lang="scss">
+  @reference "../styles.css";
+
   nav {
     @apply flex justify-center gap-2;
     @apply text-2xl font-bold;

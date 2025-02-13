@@ -1,12 +1,11 @@
 ---
+import "katex/dist/katex.min.css";
+
 import { type CollectionEntry, getCollection } from "astro:content";
 
 import RootLayout from "../../layouts/RootLayout.astro";
-
 import Header from "./_Header.svelte";
 import { stripSlug } from "./_utils";
-
-import "katex/dist/katex.min.css";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");

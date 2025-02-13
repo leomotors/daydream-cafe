@@ -1,6 +1,12 @@
 <script lang="ts">
   import "../app.css";
 
+  import Certificate from "$components/Certificate.svelte";
+  import Contribution from "$components/Contribution.svelte";
+  import Intro from "$components/Intro.svelte";
+  import Project from "$components/Project.svelte";
+  import Work from "$components/Work.svelte";
+
   // Resume Content
   import {
     activities,
@@ -15,15 +21,10 @@
     volunteers,
   } from "@daydream-cafe/data";
 
+  import Hideable from "$/components/Hideable.svelte";
+
   // Intro Data
   import { introData } from "../data";
-
-  import Hideable from "$/components/Hideable.svelte";
-  import Certificate from "$components/Certificate.svelte";
-  import Contribution from "$components/Contribution.svelte";
-  import Intro from "$components/Intro.svelte";
-  import Project from "$components/Project.svelte";
-  import Work from "$components/Work.svelte";
 
   const h2clsx = "text-left text-2xl uppercase print:text-4xl font-semibold";
 </script>
@@ -65,7 +66,7 @@
   </p>
 </header>
 
-<main class="m-0 max-w-screen-xl p-4 text-center md:m-8 xl:mx-auto">
+<main class="m-0 max-w-(--breakpoint-xl) p-4 text-center md:m-8 xl:mx-auto">
   <Intro {...introData} />
 
   <!-- Section List: packages/data/src/index.ts -->
@@ -195,7 +196,9 @@
   </footer>
 </main>
 
-<style lang="postcss">
+<style lang="scss">
+  @reference "../app.css";
+
   main {
     overflow-x: hidden;
   }

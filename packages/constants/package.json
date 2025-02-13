@@ -7,8 +7,5 @@
   "scripts": {
     "lint": "eslint src --max-warnings=0",
     "format": "eslint src --fix"
-  },
-  "devDependencies": {
-    "@daydream-cafe/config": "workspace:*"
   }
 }

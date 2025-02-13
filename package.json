@@ -11,21 +11,30 @@
     "build": "FORCE_COLOR=2 turbo run build",
     "dev": "FORCE_COLOR=2 turbo run dev --parallel",
     "preview": "FORCE_COLOR=2 turbo run preview --parallel",
-    "lint": "FORCE_COLOR=2 turbo run lint",
-    "format": "FORCE_COLOR=2 turbo run format"
+    "lint": "FORCE_COLOR=2 turbo run lint --continue",
+    "format": "FORCE_COLOR=2 turbo run format --continue"
   },
   "devDependencies": {
     "@daydream-cafe/config": "workspace:*",
-    "@types/node": "^22.10.2",
-    "autoprefixer": "^10.4.20",
-    "bun-types": "^1.1.42",
-    "postcss": "^8.4.49",
+    "@types/node": "^22.13.2",
+    "bun-types": "^1.2.2",
+    "eslint": "^9.20.1",
     "prettier": "^3.4.2",
-    "tailwindcss": "^3.4.17",
-    "turbo": "^2.3.3"
+    "turbo": "^2.4.2"
   },
   "engines": {
     "node": "^22.11"
   },
-  "packageManager": "pnpm@9.15.1"
+  "packageManager": "pnpm@10.3.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "sharp",
+      "svelte-preprocess"
+    ]
+  },
+  "dependencies": {
+    "tailwindcss": "4.0.0"
+  }
 }

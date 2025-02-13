@@ -30,7 +30,9 @@
   </ul>
 </div>
 
-<style lang="postcss">
+<style lang="scss">
+  @reference "../app.css";
+
   .work-experience {
     @apply my-4;
   }

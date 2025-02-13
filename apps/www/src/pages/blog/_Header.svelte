@@ -2,9 +2,9 @@
   import type { CollectionEntry } from "astro:content";
   import clsx from "clsx/lite";
 
+  import styles from "./_blog.module.scss";
   import PostDate from "./_PostDate.svelte";
   import Tags from "./_Tags.svelte";
-  import styles from "./_blog.module.scss";
   import { formatDate, toDate } from "./_utils";
 
   export let post: CollectionEntry<"blog">;

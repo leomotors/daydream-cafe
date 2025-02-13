@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { Links } from "@daydream-cafe/constants";
   import Briefcase from "svelte-bootstrap-icons/lib/Briefcase.svelte";
   import GitHub from "svelte-bootstrap-icons/lib/Github.svelte";
   import Linkedin from "svelte-bootstrap-icons/lib/Linkedin.svelte";
   import Medium from "svelte-bootstrap-icons/lib/Medium.svelte";
+
+  import { Links } from "@daydream-cafe/constants";
 
   import { CgWebring, LinkButton } from "../components";
 </script>
@@ -43,6 +44,8 @@
 </main>
 
 <style lang="scss">
+  @reference "../styles.css";
+
   section {
     @apply flex w-[calc(100vw-4rem)] flex-col justify-center gap-2 sm:w-1/2 lg:w-fit lg:flex-row;
   }

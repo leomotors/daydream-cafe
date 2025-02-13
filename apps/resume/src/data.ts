@@ -1,7 +1,7 @@
-import { introData as baseIntroData } from "@daydream-cafe/data";
-
 import { dev } from "$app/environment";
 import { env } from "$env/dynamic/public";
+
+import { introData as baseIntroData } from "@daydream-cafe/data";
 
 export const introData = {
   ...baseIntroData,

@@ -21,6 +21,8 @@
 </a>
 
 <style lang="scss">
+  @reference "../styles.css";
+
   a {
     @apply border-2 border-slate-400 bg-slate-800 transition-all hover:bg-slate-700;
     @apply flex cursor-pointer select-none flex-row items-center justify-center gap-2 rounded-lg;

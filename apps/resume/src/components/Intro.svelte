@@ -13,7 +13,7 @@
   class="flex flex-col flex-wrap text-sm sm:flex-row sm:text-base print:flex-row"
 >
   <div class="w-48 flex-1 text-left sm:py-4">
-    <p><a href="tel:{phone}">{phone}</a></p>
+    <p>{phone}</p>
     <p><a href="mailto:{email}">{email}</a></p>
     <p>{location}</p>
   </div>
