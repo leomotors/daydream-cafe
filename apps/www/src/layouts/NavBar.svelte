@@ -1,9 +1,8 @@
 <script lang="ts">
-  import ExternalLink from "../components/ExternalLink.svelte";
-
   import { Links } from "@daydream-cafe/constants";
 
   import CgWebring from "../components/CgWebring.svelte";
+  import ExternalLink from "../components/ExternalLink.svelte";
 </script>
 
 <nav class="h-16 bg-slate-700 shadow flex items-center px-4 justify-center">

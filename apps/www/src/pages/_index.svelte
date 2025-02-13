@@ -1,9 +1,7 @@
 <script lang="ts">
-  import Briefcase from "svelte-bootstrap-icons/lib/Briefcase.svelte";
-
   import { Links } from "@daydream-cafe/constants";
 
-  import { ExtLink, Image, LinkButton } from "../components";
+  import { ExtLink, Image } from "../components";
 </script>
 
 <main class="flex flex-col items-center gap-4 text-center">
