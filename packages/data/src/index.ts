@@ -18,14 +18,14 @@ export * from "./volunteer.js";
 // 4. OSS Contributions
 export * from "./osscontrib.js";
 
-// 5. Base Skills
-export * from "./baseskills.js";
-
-// 6. Side Projects
+// 5. Side Projects
 export * from "./sideprojects.js";
 
-// 7. Activities and Awards
+// 6. Activities and Awards
 export * from "./activites.js";
+
+// 7. Qualifications
+export * from "./qualification.js";
 
 // 8. Certificates
 export * from "./certificates.js";

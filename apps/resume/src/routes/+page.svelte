@@ -10,12 +10,13 @@
   // Resume Content
   import {
     activities,
-    baseSkills,
     certificates,
     educations,
     experiences,
     fullVersionLink,
+    fullVersionLinkShort,
     ossContribs,
+    qualifications,
     sideProjects,
     sourceLink,
     volunteers,
@@ -126,22 +127,6 @@
   <!-- Section 5 -->
   <section>
     <Hideable>
-      <h2 class={h2clsx}>Base Skills</h2>
-      <hr />
-
-      <ul>
-        {#each baseSkills as skill}
-          <Hideable>
-            <li>{skill}</li>
-          </Hideable>
-        {/each}
-      </ul>
-    </Hideable>
-  </section>
-
-  <!-- Section 6 -->
-  <section>
-    <Hideable>
       <h2 class={h2clsx}>Side Projects</h2>
       <hr />
 
@@ -155,7 +140,7 @@
     </Hideable>
   </section>
 
-  <!-- Section 7 -->
+  <!-- Section 6 -->
   <section>
     <Hideable>
       <h2 class={h2clsx}>Activities & Awards</h2>
@@ -166,6 +151,24 @@
           <Hideable>
             <li>
               <strong>{activity.name}</strong>, {activity.description}
+            </li>
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
+  </section>
+
+  <!-- Section 7 -->
+  <section>
+    <Hideable>
+      <h2 class={h2clsx}>Qualifications</h2>
+      <hr />
+
+      <ul>
+        {#each qualifications as qualification}
+          <Hideable>
+            <li>
+              {qualification}
             </li>
           </Hideable>
         {/each}
@@ -190,9 +193,10 @@
   </section>
 
   <footer class="print-only">
-    (See in <a href={fullVersionLink} target="_blank" rel="noreferrer">web</a>
-    for full version or view
-    <a href={sourceLink} target="_blank" rel="noreferrer">source code</a>)
+    (Visit <a href={fullVersionLink} target="_blank" rel="noreferrer">
+      {fullVersionLinkShort}
+    </a>
+    for Full Version, Source Code in my GitHub)
   </footer>
 </main>
 

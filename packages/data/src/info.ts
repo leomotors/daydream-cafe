@@ -1,6 +1,7 @@
 import { Links } from "@daydream-cafe/constants";
 
-export const fullVersionLink = "https://resume.leomotors.me";
+export const fullVersionLinkShort = "resume.leomotors.me";
+export const fullVersionLink = `https://${fullVersionLinkShort}`;
 export const sourceLink = "https://github.com/leomotors/daydream-cafe";
 
 export const introData = {
