@@ -1,5 +1,13 @@
 <script lang="ts">
-  export let hide = false;
+  import type { Snippet } from "svelte";
+  import { stopPropagation } from "svelte/legacy";
+
+  interface Props {
+    hide?: boolean;
+    children: Snippet;
+  }
+
+  let { hide = $bindable(false), children }: Props = $props();
 
   const toggleHide = () => (hide = !hide);
 </script>
@@ -10,13 +18,13 @@
   class:text-gray-300={hide}
   role="button"
 >
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <!-- svelte-ignore a11y_click_events_have_key_events -->
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
   <span
-    on:click|stopPropagation={toggleHide}
+    onclick={stopPropagation(toggleHide)}
     class="cursor-pointer select-none"
     class:cursor-copy={hide}
   >
-    <slot />
+    {@render children()}
   </span>
 </div>

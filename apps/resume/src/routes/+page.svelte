@@ -34,7 +34,7 @@
 >
   <h1 class="text-4xl">Resumette</h1>
   <h3>
-    <button on:click={() => window.print()} class="text-lg underline">
+    <button onclick={() => window.print()} class="text-lg underline">
       [Print]
     </button>
   </h3>

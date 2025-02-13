@@ -1,8 +1,12 @@
 <script lang="ts">
   import type { SideProject } from "@daydream-cafe/data";
 
-  export let data: SideProject;
-  $: ({ name, description, url, technologies } = data);
+  interface Props {
+    data: SideProject;
+  }
+
+  let { data }: Props = $props();
+  let { name, description, url, technologies } = $derived(data);
 </script>
 
 <li>

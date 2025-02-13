@@ -1,8 +1,12 @@
 <script lang="ts">
   import type { Experience } from "@daydream-cafe/data";
 
-  export let data: Experience;
-  $: ({ company, duration, positions } = data);
+  interface Props {
+    data: Experience;
+  }
+
+  let { data }: Props = $props();
+  let { company, duration, positions } = $derived(data);
 </script>
 
 <div class="work-experience">

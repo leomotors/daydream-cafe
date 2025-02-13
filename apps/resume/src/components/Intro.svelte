@@ -1,12 +1,25 @@
 <script lang="ts">
-  export let name = "";
-  export let nickname = "";
-  export let phone = "";
-  export let email = "";
-  export let github = "";
-  export let linkedin = "";
-  export let location = "";
-  export let website = "";
+  interface Props {
+    name?: string;
+    nickname?: string;
+    phone?: string;
+    email?: string;
+    github?: string;
+    linkedin?: string;
+    location?: string;
+    website?: string;
+  }
+
+  let {
+    name = "",
+    nickname = "",
+    phone = "",
+    email = "",
+    github = "",
+    linkedin = "",
+    location = "",
+    website = "",
+  }: Props = $props();
 </script>
 
 <div

@@ -3,7 +3,11 @@
 
   import Hideable from "./Hideable.svelte";
 
-  export let data: Contribution[];
+  interface Props {
+    data: Contribution[];
+  }
+
+  let { data }: Props = $props();
 </script>
 
 <ul class="list-disc pl-8 text-left">

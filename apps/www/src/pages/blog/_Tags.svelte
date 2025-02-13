@@ -1,6 +1,10 @@
 <script lang="ts">
-  export let tags: string[] | undefined = undefined;
-  export let clsx: string | undefined = undefined;
+  interface Props {
+    tags?: string[] | undefined;
+    clsx?: string | undefined;
+  }
+
+  let { tags = undefined, clsx = undefined }: Props = $props();
 </script>
 
 {#if tags}

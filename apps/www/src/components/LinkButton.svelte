@@ -1,7 +1,15 @@
 <script lang="ts">
-  export let name = "";
-  export let to: `http${"s" | ""}://${string}`;
-  export let size: "sm" | "lg" = "lg";
+  import type { Snippet } from "svelte";
+
+  interface Props {
+    name?: string;
+    to: `http${"s" | ""}://${string}`;
+    size?: "sm" | "lg";
+    children: Snippet;
+    [key: string]: unknown;
+  }
+
+  let { name = "", to, size = "lg", children, ...rest }: Props = $props();
 </script>
 
 <a
@@ -9,9 +17,9 @@
   href={to}
   target="_blank"
   rel="noreferrer"
-  {...$$restProps}
+  {...rest}
 >
-  <slot />
+  {@render children()}
 
   {#if name}
     <p class={size == "lg" ? "text-xl font-bold sm:text-2xl" : "text-lg"}>

@@ -7,9 +7,12 @@
   import Tags from "./_Tags.svelte";
   import { formatDate, toDate } from "./_utils";
 
-  export let post: CollectionEntry<"blog">;
+  interface Props {
+    post: CollectionEntry<"blog">;
+    smol?: boolean;
+  }
 
-  export let smol = false;
+  let { post, smol = false }: Props = $props();
 </script>
 
 <header

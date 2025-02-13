@@ -1,6 +1,10 @@
 <script lang="ts">
-  export let writtenAt: string;
-  export let updated = "";
+  interface Props {
+    writtenAt: string;
+    updated?: string;
+  }
+
+  let { writtenAt, updated = "" }: Props = $props();
 </script>
 
 <p>

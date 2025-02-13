@@ -1,9 +1,13 @@
 <script lang="ts">
   import type { Certificate } from "@daydream-cafe/data";
 
-  export let name: Certificate["name"];
-  export let image: Certificate["image"];
-  export let link: Certificate["link"];
+  interface Props {
+    name: Certificate["name"];
+    image: Certificate["image"];
+    link: Certificate["link"];
+  }
+
+  let { name, image, link }: Props = $props();
 </script>
 
 <div class="certificate-card" title={name}>
