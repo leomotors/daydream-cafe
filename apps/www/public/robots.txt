@@ -1,3 +1,2 @@
 User-agent: *
-# Don't index this page
-Disallow: /blog/parser-testing
+Disallow: /blog/
