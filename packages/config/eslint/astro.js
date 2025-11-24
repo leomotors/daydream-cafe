@@ -1,11 +1,11 @@
 // @ts-check
 
+import { defineConfig } from "eslint/config";
 import eslintPluginAstro from "eslint-plugin-astro";
-import tseslint from "typescript-eslint";
 
 import svelte from "./svelte.js";
 
-export default tseslint.config(
+export default defineConfig(
   ...svelte,
   ...eslintPluginAstro.configs.recommended,
 );

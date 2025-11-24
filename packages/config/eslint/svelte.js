@@ -1,5 +1,6 @@
 // @ts-check
 
+import { defineConfig } from "eslint/config";
 import eslintPluginSvelte from "eslint-plugin-svelte";
 import globals from "globals";
 import svelteParser from "svelte-eslint-parser";
@@ -7,10 +8,10 @@ import tseslint from "typescript-eslint";
 
 import base from "./base.js";
 
-export default tseslint.config(
+export default defineConfig(
   ...base,
-  ...eslintPluginSvelte.configs["flat/recommended"],
-  ...eslintPluginSvelte.configs["flat/prettier"],
+  ...eslintPluginSvelte.configs.recommended,
+  ...eslintPluginSvelte.configs.prettier,
   // https://github.com/sveltejs/eslint-plugin-svelte/issues/732
   {
     files: ["**/*.svelte"],
