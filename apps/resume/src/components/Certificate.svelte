@@ -15,6 +15,3 @@
     <img src={image} alt="Image for {name}" class="h-[100px] print:h-[70px]" />
   </a>
 </div>
-
-<style lang="scss">
-</style>

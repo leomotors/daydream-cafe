@@ -11,7 +11,7 @@
 </script>
 
 <ul class="list-disc pl-8 text-left">
-  {#each data as d}
+  {#each data as d (d.name)}
     <Hideable>
       <li>
         <p>
@@ -20,7 +20,7 @@
 
         {#if d.contributions.length > 0}
           <ul class="list-disc pl-8 print:pl-6">
-            {#each d.contributions as contribution}
+            {#each d.contributions as contribution, index (index)}
               <li>{contribution}</li>
             {/each}
           </ul>

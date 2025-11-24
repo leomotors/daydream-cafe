@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Links } from "@daydream-cafe/constants";
-   
-  import CgWebring from "../components/CgWebring.svelte"; 
+
+  import CgWebring from "../components/CgWebring.svelte";
   import ExternalLink from "../components/ExternalLink.svelte";
 </script>
 

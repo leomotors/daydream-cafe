@@ -15,7 +15,7 @@
     <p>{duration}</p>
   </div>
   <ul class="list-disc pl-8 text-left print:pl-6">
-    {#each positions as position}
+    {#each positions as position, index (index)}
       <li>
         <p>
           <strong>{position.name}</strong>
@@ -25,7 +25,7 @@
         <p>Technologies: {position.technologies.join(", ")}</p>
 
         <ul class="list-disc pl-8 print:pl-6">
-          {#each position.jobs as job}
+          {#each position.jobs as job, index (index)}
             <li>{job}</li>
           {/each}
         </ul>

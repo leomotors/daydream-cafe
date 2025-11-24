@@ -79,7 +79,7 @@
       <hr />
 
       <ul>
-        {#each educations as edu}
+        {#each educations as edu (edu.name)}
           <Hideable>
             <li>
               <strong>{edu.name}</strong>, {edu.program}, {edu.year} (GPAX {edu.gpax})
@@ -96,7 +96,7 @@
       <h2 class={h2clsx}>Work Experience</h2>
       <hr />
 
-      {#each experiences as experience}
+      {#each experiences as experience, index (index)}
         <Hideable>
           <Work data={experience} />
         </Hideable>
@@ -131,7 +131,7 @@
       <hr />
 
       <ul>
-        {#each sideProjects as project}
+        {#each sideProjects as project (project.name)}
           <Hideable hide={!!project.hide}>
             <Project data={project} />
           </Hideable>
@@ -147,7 +147,7 @@
       <hr />
 
       <ul>
-        {#each activities as activity}
+        {#each activities as activity (activity.name)}
           <Hideable>
             <li>
               <strong>{activity.name}</strong>, {activity.description}
@@ -165,7 +165,7 @@
       <hr />
 
       <ul>
-        {#each qualifications as qualification}
+        {#each qualifications as qualification, index (index)}
           <Hideable>
             <li>
               {qualification}
@@ -183,7 +183,7 @@
       <hr />
 
       <div class="flex">
-        {#each certificates as certificate}
+        {#each certificates as certificate (certificate.name)}
           <Hideable>
             <Certificate {...certificate} />
           </Hideable>
