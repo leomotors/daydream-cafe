@@ -3,9 +3,7 @@
 name: Deploy Website
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch: # Disabled
 
 jobs:
   deploy_resume:
