@@ -3,6 +3,9 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["build"],
   "compilerOptions": {
-    "plugins": [{ "name": "@astrojs/ts-plugin" }]
+    "plugins": [{ "name": "@astrojs/ts-plugin" }],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   }
 }

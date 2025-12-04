@@ -3,9 +3,9 @@ import "katex/dist/katex.min.css";
 
 import { type CollectionEntry, getCollection } from "astro:content";
 
-import RootLayout from "../../layouts/RootLayout.astro";
-import Header from "./_Header.svelte";
-import { stripSlug } from "./_utils";
+import Header from "@/components/blog/Header.svelte";
+import { stripSlug } from "@/components/blog/utils";
+import RootLayout from "@/layouts/RootLayout.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");

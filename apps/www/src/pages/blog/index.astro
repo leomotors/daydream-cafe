@@ -1,9 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 
-import RootLayout from "../../layouts/RootLayout.astro";
-import Header from "./_Header.svelte";
-import { stripSlug, toDate } from "./_utils";
+import Header from "@/components/blog/Header.svelte";
+import { stripSlug, toDate } from "@/components/blog/utils";
+import RootLayout from "@/layouts/RootLayout.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) =>

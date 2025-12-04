@@ -2,10 +2,10 @@
   import type { CollectionEntry } from "astro:content";
   import clsx from "clsx/lite";
 
-  import styles from "./_blog.module.scss";
-  import PostDate from "./_PostDate.svelte";
-  import Tags from "./_Tags.svelte";
-  import { formatDate, toDate } from "./_utils";
+  import styles from "./blog.module.scss";
+  import PostDate from "./PostDate.svelte";
+  import Tags from "./Tags.svelte";
+  import { formatDate, toDate } from "./utils";
 
   interface Props {
     post: CollectionEntry<"blog">;
@@ -19,7 +19,7 @@
   style={post.data.image && `background-image: url(${post.data.image})`}
   class={clsx(
     styles.imageCard,
-    smol || "mx-4 aspect-[4/1] sm:mx-auto sm:w-[calc(100vw-8rem)]",
+    smol || "mx-4 aspect-4/1 sm:mx-auto sm:w-[calc(100vw-8rem)]",
     smol && "h-96",
   )}
 >
