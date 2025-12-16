@@ -13,28 +13,28 @@
     "format": "prettier --write \"src/**/*.{css,scss,md}\" && eslint src --fix"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.12",
+    "@astrojs/mdx": "^4.3.13",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.0",
-    "@astrojs/svelte": "^7.2.2",
+    "@astrojs/svelte": "^7.2.4",
     "@daydream-cafe/config": "workspace:*",
     "@daydream-cafe/constants": "workspace:*",
     "@repo/ui": "workspace:*",
-    "@tailwindcss/vite": "^4.1.17",
-    "astro": "^5.16.4",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.16.6",
     "clsx": "^2.1.1",
-    "katex": "^0.16.25",
+    "katex": "^0.16.27",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
-    "sass": "^1.94.2",
-    "svelte": "^5.45.5",
+    "sass": "^1.97.0",
+    "svelte": "^5.46.0",
     "svelte-bootstrap-icons": "^3.3.0",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-svelte": "^3.4.0",
-    "typescript-eslint": "8.48.1"
+    "prettier-plugin-svelte": "^3.4.1",
+    "typescript-eslint": "8.50.0"
   }
 }

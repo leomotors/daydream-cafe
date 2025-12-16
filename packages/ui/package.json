@@ -30,21 +30,22 @@
   },
   "dependencies": {
     "@internationalized/date": "^3.10.0",
-    "@lucide/svelte": "^0.555.0",
+    "@lucide/svelte": "^0.561.0",
     "bits-ui": "^2.14.4",
     "clsx": "^2.1.1",
-    "svelte": "^5.45.5",
+    "svelte": "^5.46.0",
     "tailwind-merge": "^3.4.0",
     "tailwind-variants": "^3.2.2",
-    "tailwindcss": "^4.1.17",
+    "tailwindcss": "^4.1.18",
     "tw-animate-css": "^1.4.0"
   },
   "devDependencies": {
     "@daydream-cafe/config": "workspace:*",
     "@tsconfig/svelte": "^5.0.6",
-    "@types/node": "^24.10.1",
-    "prettier-plugin-svelte": "^3.4.0",
+    "@types/node": "^24.10.4",
+    "prettier-plugin-svelte": "^3.4.1",
     "svelte-check": "^4.3.4",
     "typescript": "^5.9.3"
-  }
+  },
+  "packageManager": "pnpm@10.26.0"
 }
