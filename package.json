@@ -12,7 +12,8 @@
     "dev": "turbo run dev",
     "preview": "turbo run preview",
     "lint": "turbo run lint --continue",
-    "format": "turbo run format --continue"
+    "format": "turbo run format --continue",
+    "check": "turbo run check --continue"
   },
   "devDependencies": {
     "@daydream-cafe/config": "workspace:*",
@@ -27,5 +28,5 @@
   "engines": {
     "node": "^24.11"
   },
-  "packageManager": "pnpm@10.24.0"
+  "packageManager": "pnpm@10.26.0"
 }

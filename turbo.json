@@ -10,7 +10,12 @@
       "dependsOn": ["build", "^build"],
       "cache": false
     },
-    "lint": {},
+    "lint": {
+      "cache": false
+    },
+    "check": {
+      "cache": false
+    },
     "format": {
       "cache": false
     },

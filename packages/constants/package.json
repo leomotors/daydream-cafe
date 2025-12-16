@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "lint": "eslint src --max-warnings=0",
-    "format": "eslint src --fix"
+    "format": "eslint src --fix",
+    "check": "tsc --noEmit"
   }
 }
