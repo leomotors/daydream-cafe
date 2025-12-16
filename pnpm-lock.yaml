@@ -108,6 +108,9 @@ importers:
       '@daydream-cafe/constants':
         specifier: workspace:*
         version: link:../../packages/constants
+      '@daydream-cafe/data':
+        specifier: workspace:*
+        version: link:../../packages/data
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui

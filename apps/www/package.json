@@ -20,6 +20,7 @@
     "@astrojs/svelte": "^7.2.4",
     "@daydream-cafe/config": "workspace:*",
     "@daydream-cafe/constants": "workspace:*",
+    "@daydream-cafe/data": "workspace:*",
     "@repo/ui": "workspace:*",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.6",

@@ -16,6 +16,8 @@ Written with SvelteKit
 
 Written with Astro + Svelte
 
+Components preferred to be written in Astro if client side interactivity is not needed.
+
 ### UI Library (packages/ui)
 
 Using shadcn-svelte, llms.txt: https://shadcn-svelte.com/llms.txt
