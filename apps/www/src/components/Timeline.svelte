@@ -1,7 +1,8 @@
 <script lang="ts">
   import type { Education, Experience } from "@daydream-cafe/data";
-  import ExperienceTimeline from "./timeline/ExperienceTimeline.svelte";
+
   import EducationTimeline from "./timeline/EducationTimeline.svelte";
+  import ExperienceTimeline from "./timeline/ExperienceTimeline.svelte";
 
   type Tab = "experience" | "education";
 

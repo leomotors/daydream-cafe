@@ -16,7 +16,9 @@
 
       <!-- Timeline line -->
       {#if i < educations.length - 1}
-        <div class="absolute left-[7px] top-6 h-full w-0.5 bg-blue-500/30"></div>
+        <div
+          class="absolute left-[7px] top-6 h-full w-0.5 bg-blue-500/30"
+        ></div>
       {/if}
 
       <!-- Content -->
