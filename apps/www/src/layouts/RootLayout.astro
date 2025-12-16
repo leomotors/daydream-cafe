@@ -4,7 +4,6 @@ import "../styles.css";
 
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import BaseHead from "./BaseHead.astro";
-import Footer from "./Footer.svelte";
 import NavBar from "./NavBar.svelte";
 
 type Props = {
@@ -26,12 +25,14 @@ const {
     <BaseHead title={title} description={description} image={image} />
   </head>
   <body>
-    <div
-      class="flex min-h-screen flex-col justify-between gap-16 bg-slate-900 pb-8 text-white"
-    >
+    <div class="fixed top-0 z-50 w-full">
       <NavBar />
+    </div>
+
+    <div
+      class="flex min-h-screen flex-col justify-center gap-16 bg-slate-900 pb-8 text-white"
+    >
       <slot />
-      <Footer />
     </div>
   </body>
 </html>

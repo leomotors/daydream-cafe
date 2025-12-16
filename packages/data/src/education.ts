@@ -22,6 +22,6 @@ export const educations = [
     name: "Chulalongkorn University",
     program: "B.Eng. Computer Engineering",
     year: "2022-2026",
-    gpax: "3.96",
+    gpax: "3.91",
   },
 ] satisfies Education[];

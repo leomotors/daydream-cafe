@@ -7,7 +7,7 @@ export const volunteers = [
     name: "Thinc",
     description:
       "Thinc. is a student-run community aiming to make impact to society. A student community committed to promoting real-world profession skills with the goal of incubating the leader of tomorrow.",
-    contributions: ["CU Get Reg (https://cugetreg.com) - Project Lead"],
+    contributions: ["CU Get Reg (https://cugetreg.com) - Project Maintainer"],
   },
   {
     name: "ISD (Part of Student Government of Chulalongkorn University)",

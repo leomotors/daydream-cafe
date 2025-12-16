@@ -5,7 +5,7 @@
   import ExternalLink from "../components/ExternalLink.svelte";
 </script>
 
-<nav class="h-16 bg-slate-700 shadow flex items-center px-4 justify-center">
+<nav class="mx-auto mt-4 w-fit max-w-3xl rounded-full border border-gray-200/50 bg-white/20 px-6 py-3 shadow-lg backdrop-blur-xs text-white">
   <div class="flex justify-center items-center gap-4">
     <ExternalLink name="GitHub" to={Links.github} />
 

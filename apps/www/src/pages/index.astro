@@ -1,7 +1,7 @@
 ---
 import { Links } from "@daydream-cafe/constants";
 
-import { ExtLink, Image } from "../components";
+import { ExtLink } from "../components";
 import RootLayout from "../layouts/RootLayout.astro";
 ---
 
@@ -19,12 +19,13 @@ import RootLayout from "../layouts/RootLayout.astro";
 
           <p class="text-lg sm:text-xl">
             I am a Software Engineer who loves to create things on my
+            {/* @ts-expect-error astro svelte 5 issue? */}
             <ExtLink href={Links.github}>GitHub</ExtLink>
           </p>
 
           <p class="text-lg">
             JavaScript Web Developer, experienced in building with Next.js and
-            SvelteKit. Hobby in Embedded Systems with ESP32.
+            SvelteKit. Hobby in building stuff for my Home Server.
           </p>
 
           <ul class="bruh my-2 [&>li]:flex [&>li]:gap-2">
@@ -55,10 +56,10 @@ import RootLayout from "../layouts/RootLayout.astro";
 
         <!-- Right Panel, showing picture | Upper on mobile -->
         <section>
-          <Image
+          <img
             class="aspect-square w-56 max-w-xs rounded-full shadow-2xl sm:w-80"
-            src="/leo_read_kob_book"
-            alt="Me reading Kob's Book"
+            src="/ag-2025-2.webp"
+            alt="My Agoda Studio Photo"
           />
         </section>
       </div>
