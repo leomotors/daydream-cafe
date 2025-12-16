@@ -23,14 +23,23 @@ const {
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} image={image} />
+    <script is:inline>
+      // Prevent flash of wrong theme
+      const theme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      document.documentElement.classList.toggle("dark", theme === "dark");
+    </script>
   </head>
   <body>
     <div class="fixed top-0 z-50 w-full">
-      <NavBar />
+      <NavBar client:load />
     </div>
 
     <div
-      class="relative flex min-h-screen flex-col justify-center gap-16 bg-slate-950 text-white"
+      class="relative flex min-h-screen flex-col justify-center gap-16 bg-white text-gray-900 dark:bg-slate-950 dark:text-white transition-colors"
     >
       <slot />
     </div>

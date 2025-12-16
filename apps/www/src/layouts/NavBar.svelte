@@ -3,11 +3,15 @@
 
   import CgWebring from "../components/CgWebring.svelte";
   import ExternalLink from "../components/ExternalLink.svelte";
+  import ThemeToggle from "../components/ThemeToggle.svelte";
+
+  const tileStyle =
+    "border border-gray-300/50 bg-white/20 shadow-lg backdrop-blur-xs text-gray-800 dark:border-gray-700/50 dark:bg-slate-800/20 dark:text-white";
 </script>
 
 <nav class="mx-auto mt-4 w-fit max-w-3xl flex gap-2">
   <div
-    class="flex justify-center items-center gap-4 rounded-full border border-gray-200/20 bg-white/20 px-6 py-3 shadow-lg backdrop-blur-xs text-white"
+    class="flex justify-center items-center gap-4 rounded-full px-6 py-3 {tileStyle}"
   >
     <ExternalLink name="GitHub" to={Links.github} />
 
@@ -18,14 +22,16 @@
     <ExternalLink name="Blog" to={Links.medium} />
   </div>
 
+  <ThemeToggle class="aspect-square rounded-full px-4 {tileStyle}" />
+
   <div
-    class="flex aspect-square items-center justify-center rounded-full border border-gray-200/20 bg-white/20 shadow-lg backdrop-blur-xs text-white px-4"
+    class="flex aspect-square items-center justify-center rounded-full px-4 {tileStyle}"
   >
     <a
       href="https://creatorsgarten.org/ring"
       target="_blank"
       rel="noreferrer"
-      class="flex items-center justify-center hover:text-slate-300 transition-colors"
+      class="flex items-center justify-center hover:text-blue-600 dark:hover:text-slate-300 transition-colors"
     >
       <CgWebring size={20} />
     </a>

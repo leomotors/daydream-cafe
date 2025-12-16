@@ -10,7 +10,7 @@
 </script>
 
 <a
-  class="text-blue-300 transition-colors hover:text-blue-400"
+  class="text-blue-500 hover:text-blue-600 dark:text-blue-300 transition-colors dark:hover:text-blue-400"
   {href}
   target="_blank"
   rel="noreferrer"

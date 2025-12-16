@@ -21,7 +21,7 @@
   }
 </script>
 
-<section class="w-full bg-slate-800/50 py-12">
+<section class="w-full bg-gray-100 py-12 dark:bg-slate-800/50">
   <div class="mx-auto max-w-4xl px-4">
     <!-- Tabs -->
     <div class="mb-8 flex justify-center gap-2">
@@ -29,7 +29,7 @@
         class="rounded-full px-6 py-2 font-medium transition-all {activeTab ===
         'experience'
           ? 'bg-blue-600 text-white shadow-lg'
-          : 'border border-gray-600 bg-slate-800 text-gray-300 hover:bg-slate-700'}"
+          : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-300 dark:hover:bg-slate-700'}"
         onclick={() => setTab("experience")}
       >
         Job Experience
@@ -38,7 +38,7 @@
         class="rounded-full px-6 py-2 font-medium transition-all {activeTab ===
         'education'
           ? 'bg-blue-600 text-white shadow-lg'
-          : 'border border-gray-600 bg-slate-800 text-gray-300 hover:bg-slate-700'}"
+          : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-300 dark:hover:bg-slate-700'}"
         onclick={() => setTab("education")}
       >
         Education

@@ -11,7 +11,7 @@
     <div class="relative pl-8">
       <!-- Timeline dot -->
       <div
-        class="absolute left-0 top-2 h-4 w-4 rounded-full border-4 border-blue-500 bg-slate-900"
+        class="absolute left-0 top-2 h-4 w-4 rounded-full border-4 border-blue-500 bg-white dark:bg-slate-900"
       ></div>
 
       <!-- Timeline line -->
@@ -22,17 +22,25 @@
       {/if}
 
       <!-- Content -->
-      <div class="rounded-lg border border-gray-700 bg-slate-800 p-6 shadow-lg">
+      <div
+        class="rounded-lg border border-gray-200 bg-white p-6 shadow-lg dark:border-gray-700 dark:bg-slate-800"
+      >
         <div
           class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"
         >
           <div class="text-left">
-            <h3 class="text-xl font-bold text-white">{edu.name}</h3>
-            <p class="text-gray-300">{edu.program}</p>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+              {edu.name}
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">{edu.program}</p>
           </div>
           <div class="text-left sm:text-right">
-            <span class="text-sm text-gray-400">{edu.year}</span>
-            <p class="text-sm font-semibold text-blue-400">GPAX: {edu.gpax}</p>
+            <span class="text-sm text-gray-600 dark:text-gray-400"
+              >{edu.year}</span
+            >
+            <p class="text-sm font-semibold text-blue-600 dark:text-blue-400">
+              GPAX: {edu.gpax}
+            </p>
           </div>
         </div>
       </div>
