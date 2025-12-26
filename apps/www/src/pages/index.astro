@@ -1,10 +1,22 @@
 ---
 import { Links } from "@daydream-cafe/constants";
-import { educations, experiences } from "@daydream-cafe/data";
+import {
+  activities,
+  certificates,
+  educations,
+  experiences,
+  ossContribs,
+  qualifications,
+  sideProjects,
+  volunteers,
+} from "@daydream-cafe/data";
 
 import { ExtLink } from "../components";
 import Timeline from "../components/Timeline.svelte";
 import RootLayout from "../layouts/RootLayout.astro";
+
+// Filter out projects with hide property
+const visibleProjects = sideProjects.filter((project) => !project.hide);
 ---
 
 <RootLayout>
@@ -90,6 +102,16 @@ import RootLayout from "../layouts/RootLayout.astro";
       </div>
     </section>
 
-    <Timeline experiences={experiences} educations={educations} client:load />
+    <Timeline
+      experiences={experiences}
+      educations={educations}
+      projects={visibleProjects}
+      volunteers={volunteers}
+      ossContribs={ossContribs}
+      activities={activities}
+      certificates={certificates}
+      qualifications={qualifications}
+      client:load
+    />
   </main>
 </RootLayout>

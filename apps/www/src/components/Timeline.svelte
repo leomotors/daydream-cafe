@@ -1,17 +1,45 @@
 <script lang="ts">
-  import type { Education, Experience } from "@daydream-cafe/data";
+  import type {
+    Activity,
+    Certificate,
+    Education,
+    Experience,
+    OSSContrib,
+    SideProject,
+    Volunteer,
+  } from "@daydream-cafe/data";
 
+  import ActivitiesTab from "./timeline/ActivitiesTab.svelte";
+  import ContributionTab from "./timeline/ContributionTab.svelte";
   import EducationTimeline from "./timeline/EducationTimeline.svelte";
   import ExperienceTimeline from "./timeline/ExperienceTimeline.svelte";
+  import ProjectsTab from "./timeline/ProjectsTab.svelte";
 
-  type Tab = "experience" | "education";
+  type Tab =
+    | "experience"
+    | "education"
+    | "projects"
+    | "contribution"
+    | "activities";
 
   let {
     experiences,
     educations,
+    projects,
+    volunteers,
+    ossContribs,
+    activities,
+    certificates,
+    qualifications,
   }: {
     experiences: Experience[];
     educations: Education[];
+    projects: SideProject[];
+    volunteers: Volunteer[];
+    ossContribs: OSSContrib[];
+    activities: Activity[];
+    certificates: Certificate[];
+    qualifications: string[];
   } = $props();
 
   let activeTab = $state<Tab>("experience");
@@ -24,7 +52,7 @@
 <section class="w-full bg-gray-100 py-12 dark:bg-slate-800/50">
   <div class="mx-auto max-w-4xl px-4">
     <!-- Tabs -->
-    <div class="mb-8 flex justify-center gap-2">
+    <div class="mb-8 flex flex-wrap justify-center gap-2">
       <button
         class="rounded-full px-6 py-2 font-medium transition-all {activeTab ===
         'experience'
@@ -43,14 +71,47 @@
       >
         Education
       </button>
+      <button
+        class="rounded-full px-6 py-2 font-medium transition-all {activeTab ===
+        'projects'
+          ? 'bg-blue-600 text-white shadow-lg'
+          : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-300 dark:hover:bg-slate-700'}"
+        onclick={() => setTab("projects")}
+      >
+        Projects
+      </button>
+      <button
+        class="rounded-full px-6 py-2 font-medium transition-all {activeTab ===
+        'contribution'
+          ? 'bg-blue-600 text-white shadow-lg'
+          : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-300 dark:hover:bg-slate-700'}"
+        onclick={() => setTab("contribution")}
+      >
+        Contribution
+      </button>
+      <button
+        class="rounded-full px-6 py-2 font-medium transition-all {activeTab ===
+        'activities'
+          ? 'bg-blue-600 text-white shadow-lg'
+          : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-300 dark:hover:bg-slate-700'}"
+        onclick={() => setTab("activities")}
+      >
+        Activities
+      </button>
     </div>
 
     <!-- Timeline Content -->
     <div class="relative">
       {#if activeTab === "experience"}
         <ExperienceTimeline {experiences} />
-      {:else}
+      {:else if activeTab === "education"}
         <EducationTimeline {educations} />
+      {:else if activeTab === "projects"}
+        <ProjectsTab {projects} />
+      {:else if activeTab === "contribution"}
+        <ContributionTab {volunteers} {ossContribs} />
+      {:else if activeTab === "activities"}
+        <ActivitiesTab {activities} {certificates} {qualifications} />
       {/if}
     </div>
   </div>

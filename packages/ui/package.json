@@ -11,10 +11,10 @@
     "**/*.css"
   ],
   "exports": {
-    "./atom/*": {
-      "types": "./src/atom/*/index.ts",
-      "svelte": "./src/atom/*/index.ts",
-      "default": "./src/atom/*/index.ts"
+    "./atoms/*": {
+      "types": "./src/atoms/*/index.ts",
+      "svelte": "./src/atoms/*/index.ts",
+      "default": "./src/atoms/*/index.ts"
     },
     "./icons/*": {
       "types": "./src/icons/*",

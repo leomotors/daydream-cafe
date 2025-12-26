@@ -13,7 +13,7 @@
   href={to}
   target="_blank"
   rel="noreferrer"
-  class="flex gap-1 items-center hover:underline hover:text-slate-300 transition-colors"
+  class="flex gap-1 items-center hover:underline hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
 >
   <span>{name}</span>
 
