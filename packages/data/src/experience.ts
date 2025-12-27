@@ -56,7 +56,7 @@ export const experiences = [
         name: "Platform Engineer (Frontend, Part Time)",
         period: "December 2022 - September 2023",
         jobs: [
-          "Maintain Codebase Quality ex. formatting, unit tests and dependency's vulnerabilities (required for audit)",
+          "Maintain Codebase Quality, such as formatting, unit tests, and dependencies' vulnerabilities (required for audit)",
           "Ensure Good Codebase Quality and CI Workflows to improve developers' DX",
         ],
         technologies: ["Jest", "Renovate"],
