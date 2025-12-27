@@ -30,6 +30,8 @@
   import { introData } from "../data";
 
   const h2clsx = "text-left text-2xl uppercase print:text-4xl font-semibold";
+
+  let hideFooter = $state(false);
 </script>
 
 <header
@@ -249,7 +251,14 @@
     </Hideable>
   </section>
 
-  <footer class="print-only">
+  <div class="web-only">
+    <label class="flex items-center justify-center gap-2">
+      <input type="checkbox" bind:checked={hideFooter} />
+      <span>Hide footer from print (the one below this checkbox)</span>
+    </label>
+  </div>
+
+  <footer class={hideFooter ? "web-only" : ""}>
     (Visit <a href={fullVersionLink} target="_blank" rel="noreferrer">
       {fullVersionLinkShort}
     </a>
