@@ -7,6 +7,7 @@
     GitPullRequest,
     GraduationCap,
   } from "@lucide/svelte";
+  import { onMount } from "svelte";
 
   import type {
     Activity,
@@ -26,13 +27,16 @@
   import ProjectsTab from "./timeline/ProjectsTab.svelte";
   import PublicationsTab from "./timeline/PublicationsTab.svelte";
 
-  type Tab =
-    | "experience"
-    | "education"
-    | "projects"
-    | "contribution"
-    | "activities"
-    | "publications";
+  const tabValues = [
+    "experience",
+    "education",
+    "projects",
+    "contribution",
+    "activities",
+    "publications",
+  ] as const;
+
+  type Tab = (typeof tabValues)[number];
 
   let {
     experiences,
@@ -60,7 +64,22 @@
 
   function setTab(tab: Tab) {
     activeTab = tab;
+    window.location.hash = tab;
   }
+
+  function getTabFromHash(): Tab {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash.slice(1);
+      if (hash && tabValues.includes(hash as Tab)) {
+        return hash as Tab;
+      }
+    }
+    return "experience";
+  }
+
+  onMount(() => {
+    activeTab = getTabFromHash();
+  });
 </script>
 
 <section class="w-full bg-gray-100 py-12 dark:bg-slate-800/50">
