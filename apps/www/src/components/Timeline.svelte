@@ -1,33 +1,38 @@
 <script lang="ts">
+  import {
+    Award,
+    BookOpen,
+    Briefcase,
+    FolderGit2,
+    GitPullRequest,
+    GraduationCap,
+  } from "@lucide/svelte";
+
   import type {
     Activity,
     Certificate,
     Education,
     Experience,
     OSSContrib,
+    Publication,
     SideProject,
     Volunteer,
   } from "@daydream-cafe/data";
-  import {
-    Briefcase,
-    GraduationCap,
-    FolderGit2,
-    GitPullRequest,
-    Award,
-  } from "@lucide/svelte";
 
   import ActivitiesTab from "./timeline/ActivitiesTab.svelte";
   import ContributionTab from "./timeline/ContributionTab.svelte";
   import EducationTimeline from "./timeline/EducationTimeline.svelte";
   import ExperienceTimeline from "./timeline/ExperienceTimeline.svelte";
   import ProjectsTab from "./timeline/ProjectsTab.svelte";
+  import PublicationsTab from "./timeline/PublicationsTab.svelte";
 
   type Tab =
     | "experience"
     | "education"
     | "projects"
     | "contribution"
-    | "activities";
+    | "activities"
+    | "publications";
 
   let {
     experiences,
@@ -36,6 +41,7 @@
     volunteers,
     ossContribs,
     activities,
+    publications,
     certificates,
     qualifications,
   }: {
@@ -45,6 +51,7 @@
     volunteers: Volunteer[];
     ossContribs: OSSContrib[];
     activities: Activity[];
+    publications: Publication[];
     certificates: Certificate[];
     qualifications: string[];
   } = $props();
@@ -110,6 +117,16 @@
         <Award class="h-4 w-4" />
         Activities
       </button>
+      <button
+        class="flex items-center gap-2 rounded-full px-6 py-2 font-medium transition-all {activeTab ===
+        'publications'
+          ? 'bg-blue-600 text-white shadow-lg'
+          : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-300 dark:hover:bg-slate-700'}"
+        onclick={() => setTab("publications")}
+      >
+        <BookOpen class="h-4 w-4" />
+        Publications
+      </button>
     </div>
 
     <!-- Timeline Content -->
@@ -124,6 +141,8 @@
         <ContributionTab {volunteers} {ossContribs} />
       {:else if activeTab === "activities"}
         <ActivitiesTab {activities} {certificates} {qualifications} />
+      {:else if activeTab === "publications"}
+        <PublicationsTab {publications} />
       {/if}
     </div>
   </div>

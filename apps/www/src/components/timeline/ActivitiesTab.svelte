@@ -22,7 +22,7 @@
         class="mb-4 flex items-center gap-2 text-left text-2xl font-bold text-gray-900 dark:text-white"
       >
         <Award
-          class="h-8 w-8 p-1 rounded-full bg-white border border-gray-500/50"
+          class="h-8 w-8 p-1 rounded-full bg-white border border-gray-500/50 text-gray-900"
         />
         Activities & Awards
       </h3>

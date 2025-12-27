@@ -24,6 +24,9 @@ export * from "./sideprojects.js";
 // 6. Activities and Awards
 export * from "./activites.js";
 
+// 6.5 Publications
+export * from "./publications.js";
+
 // 7. Qualifications
 export * from "./qualification.js";
 

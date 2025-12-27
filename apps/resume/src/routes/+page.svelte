@@ -7,6 +7,7 @@
   import Project from "$components/Project.svelte";
   import Work from "$components/Work.svelte";
 
+  import { FULL_NAME } from "@daydream-cafe/constants";
   // Resume Content
   import {
     activities,
@@ -16,6 +17,7 @@
     fullVersionLink,
     fullVersionLinkShort,
     ossContribs,
+    publications,
     qualifications,
     sideProjects,
     sourceLink,
@@ -158,7 +160,62 @@
     </Hideable>
   </section>
 
-  <!-- Section 7 -->
+  <!-- Section 7: Publications -->
+  <section>
+    <Hideable>
+      <h2 class={h2clsx}>Publications</h2>
+      <hr />
+
+      <ul class="space-y-2">
+        {#each publications as publication (publication.doi)}
+          <Hideable>
+            <li class="space-y-1">
+              <p>
+                <strong>{publication.name}</strong>
+              </p>
+              <p class="text-sm">
+                <span class="font-medium">Type:</span>
+                {publication.type}
+                <span class="mx-2">•</span>
+                <span class="font-medium">Date:</span>
+                {publication.publishedDate}
+              </p>
+              <p class="text-sm">
+                {publication.publishedTo}
+              </p>
+              <p class="text-sm">
+                <span class="font-medium">Contributors:</span>
+                {#each publication.contributors as contributor, index (index)}
+                  <span>
+                    {#if index !== 0}
+                      ,
+                    {/if}
+                    {#if contributor === FULL_NAME}
+                      <strong>{contributor}</strong>
+                    {:else}
+                      {contributor}
+                    {/if}
+                  </span>
+                {/each}
+              </p>
+              <p class="text-sm">
+                <a
+                  href={`https://doi.org/${publication.doi}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-600 hover:underline dark:text-blue-400"
+                >
+                  DOI: {publication.doi}
+                </a>
+              </p>
+            </li>
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
+  </section>
+
+  <!-- Section 8 -->
   <section>
     <Hideable>
       <h2 class={h2clsx}>Qualifications</h2>
