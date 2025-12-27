@@ -27,7 +27,7 @@
         Activities & Awards
       </h3>
       <div class="space-y-4">
-        {#each activities as activity (activity.name)}
+        {#each activities.filter((a) => !a.hideByDefault) as activity (activity.name)}
           <div
             class="rounded-lg border border-gray-200 bg-white p-5 shadow-lg dark:border-gray-700 dark:bg-slate-800"
           >

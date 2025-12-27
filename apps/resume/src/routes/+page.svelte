@@ -148,7 +148,7 @@
 
       <ul>
         {#each activities as activity (activity.name)}
-          <Hideable>
+          <Hideable hide={activity.hideByDefault}>
             <li>
               <strong>{activity.name}</strong>, {activity.description}
             </li>

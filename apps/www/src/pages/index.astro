@@ -1,5 +1,4 @@
 ---
-import { Links } from "@daydream-cafe/constants";
 import {
   activities,
   certificates,
@@ -11,9 +10,9 @@ import {
   volunteers,
 } from "@daydream-cafe/data";
 
-import { ExtLink } from "../components";
-import Timeline from "../components/Timeline.svelte";
-import RootLayout from "../layouts/RootLayout.astro";
+import Timeline from "@/components/Timeline.svelte";
+import RootLayout from "@/layouts/RootLayout.astro";
+import Hero from "@/sections/Hero.astro";
 
 // Filter out projects with hide property
 const visibleProjects = sideProjects.filter((project) => !project.hide);
@@ -21,86 +20,7 @@ const visibleProjects = sideProjects.filter((project) => !project.hide);
 
 <RootLayout>
   <main class="flex flex-col items-center text-center">
-    <section
-      class="relative flex min-h-screen w-full items-center justify-center overflow-hidden"
-    >
-      <!-- Background gradient spots -->
-      <div class="absolute inset-0 overflow-hidden">
-        <div
-          class="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-blue-400/30 blur-3xl dark:bg-blue-600/20"
-        >
-        </div>
-        <div
-          class="absolute top-1/3 -left-40 h-80 w-80 rounded-full bg-purple-400/25 blur-3xl dark:bg-purple-600/15"
-        >
-        </div>
-        <div
-          class="absolute bottom-20 right-1/4 h-72 w-72 rounded-full bg-indigo-400/25 blur-3xl dark:bg-indigo-600/15"
-        >
-        </div>
-      </div>
-
-      <div
-        class="relative z-10 mx-auto flex max-w-4xl flex-col-reverse items-center justify-center gap-8 p-4 lg:flex-row lg:items-start"
-      >
-        <!-- Left Panel -->
-        <section class="flex flex-col gap-2 text-left">
-          <p class="font-bold text-xl sm:text-2xl">
-            Nutthapat Pongtanyavichai <span>(Leo)</span>
-          </p>
-
-          <p class="text-lg sm:text-xl">
-            I am a Software Engineer who loves to create things on my
-            {/* @ts-expect-error astro svelte 5 issue? */}
-            <ExtLink href={Links.github}>GitHub</ExtLink>
-          </p>
-
-          <p class="text-lg">
-            JavaScript Web Developer, experienced in building with Next.js and
-            SvelteKit. Hobby in building stuff for my Home Server.
-          </p>
-
-          <ul class="bruh my-2 [&>li]:flex [&>li]:gap-2">
-            <li>
-              <p>🎂</p>
-              <p>21 Years Old</p>
-            </li>
-            <li>
-              <p>🏫</p>
-              <p>
-                4<sup>th</sup> Year Computer Engineering Student at Chulalongkorn
-                University
-              </p>
-            </li>
-            <li>
-              <p>🏢</p>
-              <p>
-                Ex Platform Engineer at Brikl and Completed Agoda Summer
-                Internship 2024 & 2025
-              </p>
-            </li>
-            <li>
-              <p>💡</p>
-              <p>Thinc. Core Team</p>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Right Panel, showing picture | Upper on mobile -->
-        <section class="relative">
-          <!-- Glow effect -->
-          <div
-            class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 opacity-40 blur-2xl dark:from-blue-500 dark:via-purple-500 dark:to-pink-500 dark:opacity-50"
-          >
-          </div>
-          <img
-            class="relative z-10 aspect-square w-56 max-w-xs rounded-full shadow-2xl sm:w-80"
-            src="/ag-2025-2.webp"
-            alt="My Agoda Studio Photo"
-          />
-        </section>
-      </div>
-    </section>
+    <Hero />
 
     <Timeline
       experiences={experiences}

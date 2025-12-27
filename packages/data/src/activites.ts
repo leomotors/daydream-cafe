@@ -1,12 +1,14 @@
 export interface Activity {
   name: string;
   description: string;
+  hideByDefault?: boolean;
 }
 
 export const activities = [
   {
     name: "Code in the Wind (2022) Participant",
     description: "Game Show for TailwindCSS users in Thailand",
+    hideByDefault: true,
   },
   {
     name: "APIO 2022 Participant",
@@ -22,6 +24,7 @@ export const activities = [
     name: "6th Stupid Hackathon in Thailand (2022), Most Aesthetically Pleasing Award winner",
     description:
       "A Hackathon where you do anything you want without caring about anything. The awards are decided by voting",
+    hideByDefault: true,
   },
   {
     name: "2nd Place in NITAD Hackathon (2022)",

@@ -8,6 +8,13 @@
     SideProject,
     Volunteer,
   } from "@daydream-cafe/data";
+  import {
+    Briefcase,
+    GraduationCap,
+    FolderGit2,
+    GitPullRequest,
+    Award,
+  } from "@lucide/svelte";
 
   import ActivitiesTab from "./timeline/ActivitiesTab.svelte";
   import ContributionTab from "./timeline/ContributionTab.svelte";
@@ -54,48 +61,53 @@
     <!-- Tabs -->
     <div class="mb-8 flex flex-wrap justify-center gap-2">
       <button
-        class="rounded-full px-6 py-2 font-medium transition-all {activeTab ===
+        class="flex items-center gap-2 rounded-full px-6 py-2 font-medium transition-all {activeTab ===
         'experience'
           ? 'bg-blue-600 text-white shadow-lg'
           : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-300 dark:hover:bg-slate-700'}"
         onclick={() => setTab("experience")}
       >
+        <Briefcase class="h-4 w-4" />
         Job Experience
       </button>
       <button
-        class="rounded-full px-6 py-2 font-medium transition-all {activeTab ===
+        class="flex items-center gap-2 rounded-full px-6 py-2 font-medium transition-all {activeTab ===
         'education'
           ? 'bg-blue-600 text-white shadow-lg'
           : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-300 dark:hover:bg-slate-700'}"
         onclick={() => setTab("education")}
       >
+        <GraduationCap class="h-4 w-4" />
         Education
       </button>
       <button
-        class="rounded-full px-6 py-2 font-medium transition-all {activeTab ===
+        class="flex items-center gap-2 rounded-full px-6 py-2 font-medium transition-all {activeTab ===
         'projects'
           ? 'bg-blue-600 text-white shadow-lg'
           : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-300 dark:hover:bg-slate-700'}"
         onclick={() => setTab("projects")}
       >
+        <FolderGit2 class="h-4 w-4" />
         Projects
       </button>
       <button
-        class="rounded-full px-6 py-2 font-medium transition-all {activeTab ===
+        class="flex items-center gap-2 rounded-full px-6 py-2 font-medium transition-all {activeTab ===
         'contribution'
           ? 'bg-blue-600 text-white shadow-lg'
           : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-300 dark:hover:bg-slate-700'}"
         onclick={() => setTab("contribution")}
       >
+        <GitPullRequest class="h-4 w-4" />
         Contribution
       </button>
       <button
-        class="rounded-full px-6 py-2 font-medium transition-all {activeTab ===
+        class="flex items-center gap-2 rounded-full px-6 py-2 font-medium transition-all {activeTab ===
         'activities'
           ? 'bg-blue-600 text-white shadow-lg'
           : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-300 dark:hover:bg-slate-700'}"
         onclick={() => setTab("activities")}
       >
+        <Award class="h-4 w-4" />
         Activities
       </button>
     </div>
