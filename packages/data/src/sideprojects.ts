@@ -6,6 +6,7 @@ export interface SideProject {
   image?: string;
   // Default Hide Options
   hide?: "risky" | "old";
+  badge?: string;
 }
 
 export const sideProjects = [
@@ -16,6 +17,23 @@ export const sideProjects = [
     url: "https://medium.com/@leomotors/building-an-arm-home-server-with-rock-5-itx-f2f7b774ada4",
     image: "/projects/home-server-2507.webp",
     technologies: ["Ubuntu", "Docker", "Cloudflare Tunnel", "mdadm"],
+    badge: "Home Server",
+  },
+  {
+    name: "Low Temperature Control",
+    description:
+      "Capstone Project for my University Course. Monitoring and controlling low temperature environment remotely.",
+    url: "https://github.com/Q2TM/low-temperature-control",
+    image: "/projects/lt-capstone.webp",
+    technologies: [
+      "Embedded System",
+      "PID",
+      "Next.js",
+      "FastAPI",
+      "Elysia.js",
+      "Docker",
+    ],
+    badge: "Capstone Project",
   },
   {
     name: "Golden Frame",
@@ -25,12 +43,41 @@ export const sideProjects = [
     technologies: ["OpenCV", "Python", "Flask", "Astro", "Svelte"],
   },
   {
+    name: "Portfolio Tracking",
+    description:
+      "My simple solution to tracking my investment portfolio and assets",
+    url: "https://github.com/leomotors/portfolio-tracking",
+    image: "/projects/sakiko-webhook.webp",
+    technologies: ["Cron Job", "PostgreSQL", "Grafana"],
+  },
+  {
     name: "Home Environment Monitoring",
     description:
       "A system that monitors temperature and humidity of few rooms in my house, a history graph can be viewed easily in Grafana",
     url: "https://github.com/leomotors/home-env",
     image: "/projects/home-env-hardware.webp",
-    technologies: ["Arduino", "ESP32", "Prometheus", "Golang", "net/http"],
+    technologies: [
+      "Embedded System",
+      "Arduino",
+      "ESP32",
+      "Prometheus",
+      "Golang",
+      "net/http",
+    ],
+  },
+  {
+    name: "Chuumai Tools",
+    description:
+      "Tools that help collect data from my favourite arcade game to analyze statistics and visualize my data",
+    url: "https://github.com/leomotors/chuumai-tools",
+    image: "/projects/chuni-cron.webp",
+    technologies: [
+      "Playwright",
+      "PostgreSQL",
+      "SvelteKit",
+      "Remotion",
+      "OAuth",
+    ],
   },
   {
     name: "Waifu Bot",
@@ -47,13 +94,25 @@ export const sideProjects = [
       "PostgreSQL",
     ],
   },
-
   {
     name: "Release Action",
     description:
       "My personal GitHub Actions workflow that I use to manage releases of my projects",
     url: "https://github.com/leomotors/release-action",
+    image: "/projects/release-action.webp",
     technologies: ["GitHub Actions", "TypeScript"],
+  },
+  {
+    name: "Honami Backup",
+    description: "Backup Solution for my Home Server",
+    url: "https://github.com/leomotors/honami-backup",
+    technologies: ["Docker", "Home Server", "rclone"],
+  },
+  {
+    name: "Honami GitOps",
+    description: "Custom GitOps Solution for my Home Server",
+    url: "https://github.com/leomotors/honami-gitops",
+    technologies: ["Elysia.js", "Home Server", "Renovate Bot"],
   },
   {
     name: "Anime Captcha",

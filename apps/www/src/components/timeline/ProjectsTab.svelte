@@ -29,7 +29,7 @@
       <!-- Header with title and link -->
 
       <div class="p-6">
-        <div class="mb-4 flex items-baseline justify-between">
+        <div class="mb-4 flex items-baseline justify-between text-start">
           <h3 class="text-xl font-bold text-gray-900 dark:text-white">
             {project.name}
           </h3>
@@ -61,6 +61,13 @@
                 {tech}
               </span>
             {/each}
+            {#if project.badge}
+              <span
+                class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700 dark:bg-amber-500/20 dark:text-amber-300"
+              >
+                {project.badge}
+              </span>
+            {/if}
           </div>
         {/if}
       </div>
