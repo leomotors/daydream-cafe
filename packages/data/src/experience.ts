@@ -14,11 +14,11 @@ export interface Experience {
 export const experiences = [
   {
     company: "Agoda",
-    duration: "Current Position",
+    duration: "7 Months",
     positions: [
       {
         name: "Software Engineer Part-Time",
-        period: "August 2025 - Present",
+        period: "August 2025 - December 2025",
         jobs: ["Building internal tools, a full stack Vaadin Web Application"],
         technologies: ["Java", "Vaadin"],
       },
