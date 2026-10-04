@@ -13,15 +13,11 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <RootLayout>
-  <main
-    class="mx-4 grid grid-cols-1 gap-4 self-center lg:grid-cols-2 2xl:grid-cols-3"
-  >
-    {
-      posts.map((post) => (
-        <a href={`/blog/${stripSlug(post.slug)}`}>
-          <Header post={post} smol />
-        </a>
-      ))
-    }
+  <main class="mx-4 grid grid-cols-1 gap-4 self-center lg:grid-cols-2 2xl:grid-cols-3">
+    {posts.map((post) => (
+      <a href={`/blog/${stripSlug(post.id)}`}>
+        <Header post={post} smol />
+      </a>
+    ))}
   </main>
 </RootLayout>

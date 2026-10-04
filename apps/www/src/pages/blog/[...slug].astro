@@ -1,7 +1,7 @@
 ---
 import "katex/dist/katex.min.css";
 
-import { type CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 
 import Header from "@/components/blog/Header.svelte";
 import { stripSlug } from "@/components/blog/utils";
@@ -11,7 +11,7 @@ export async function getStaticPaths() {
   const posts = await getCollection("blog");
   return posts.map((post) => ({
     params: {
-      slug: stripSlug(post.slug),
+      slug: stripSlug(post.id),
     },
     props: post,
   }));
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <RootLayout
@@ -30,9 +30,7 @@ const { Content } = await post.render();
 >
   <Header post={post} />
 
-  <article
-    class="prose prose-invert mx-auto w-full max-w-4xl overflow-x-hidden rounded-xl p-4 sm:prose-lg"
-  >
+  <article class="prose prose-invert mx-auto w-full max-w-4xl overflow-x-hidden rounded-xl p-4 sm:prose-lg">
     <Content />
   </article>
 </RootLayout>
