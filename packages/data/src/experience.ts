@@ -52,8 +52,8 @@ export const experiences = [
       {
         name: "Software Engineer Part-Time",
         period: "February 2026 - April 2026",
-        jobs: ["Building internal tools, a full stack Vaadin Web Application"],
-        technologies: ["Java", "Vaadin"],
+        jobs: [],
+        technologies: ["C#", ".NET"],
       },
       {
         name: "Software Engineer Part-Time",
