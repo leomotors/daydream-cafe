@@ -40,13 +40,12 @@ jobs:
         run: pnpm turbo run --filter="resume.leomotors.me" build
 
       - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@1
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectName: resume-leomotors
-          directory: apps/resume/build
+          command: pages deploy apps/resume/build --project-name=resume-leomotors
 
   deploy_www:
     name: leomotors.me
@@ -80,10 +79,9 @@ jobs:
         run: pnpm turbo run --filter="leomotors.me" build
 
       - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@1
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectName: www-leomotors
-          directory: apps/www/build
+          command: pages deploy apps/www/build --project-name=www-leomotors
