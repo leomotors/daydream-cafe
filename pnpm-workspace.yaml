@@ -1,3 +1,12 @@
 packages:
   - "apps/*"
   - "packages/*"
+
+minimumReleaseAge: 2880 # 2 days
+
+# Not built under pnpm 10 either; all ship prebuilt binaries
+allowBuilds:
+  "@parcel/watcher": false
+  esbuild: false
+  sharp: false
+  svelte-preprocess: false
