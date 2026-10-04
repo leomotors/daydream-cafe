@@ -11,11 +11,50 @@ export interface Experience {
   positions: Position[];
 }
 
+// Built at deploy time, so an ongoing role's duration stays current
+function durationSince(year: number, month: number) {
+  const now = new Date();
+  const months = (now.getFullYear() - year) * 12 + now.getMonth() + 1 - month;
+  const years = Math.floor(months / 12);
+  const rest = months % 12;
+
+  return [
+    years && `${years} Year${years > 1 ? "s" : ""}`,
+    rest && `${rest} Month${rest > 1 ? "s" : ""}`,
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
+
 export const experiences = [
   {
-    company: "Agoda",
-    duration: "7 Months",
+    company: "Nansen",
+    duration: durationSince(2026, 4),
     positions: [
+      {
+        name: "Software Engineer I",
+        period: "July 2026 - Present",
+        jobs: [],
+        technologies: ["React.js", "TypeScript", "React Native"],
+      },
+      {
+        name: "Software Engineer Intern",
+        period: "April 2026 - July 2026",
+        jobs: [],
+        technologies: ["React.js", "TypeScript", "React Native"],
+      },
+    ],
+  },
+  {
+    company: "Agoda",
+    duration: "10 Months",
+    positions: [
+      {
+        name: "Software Engineer Part-Time",
+        period: "February 2026 - April 2026",
+        jobs: ["Building internal tools, a full stack Vaadin Web Application"],
+        technologies: ["Java", "Vaadin"],
+      },
       {
         name: "Software Engineer Part-Time",
         period: "August 2025 - December 2025",
